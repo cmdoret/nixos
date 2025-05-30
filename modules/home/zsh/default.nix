@@ -41,19 +41,22 @@
     '';
 
     shellAliases = {
-      sv = "sudo nvim";
-      v = "nvim";
       c = "clear";
+      cat = "bat";
       fr = "nh os switch --hostname ${profile}";
       fu = "nh os switch --hostname ${profile} --update";
-      zu = "sh <(curl -L https://gitlab.com/Zaney/zaneyos/~/releases/lastest/download/install-zaneyos.sh)";
-      ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
-      cat = "bat";
-      man = "batman";
-      ls = "eza --icons --group-directories-first -1";
-      ll = "eza --icons -lh --group-directories-first -1 --no-user --long";
+      ga = "git add";
+      gc = "git commit";
+      gp = "git push";
+      gs = "git status";
       la = "eza --icons -lah --group-directories-first -1";
+      ll = "eza --icons -lh --group-directories-first -1 --no-user --long";
+      ls = "eza --icons --group-directories-first -1";
+      man = "batman";
+      ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
+      sv = "sudo nvim";
       tree = "eza --icons --tree --group-directories-first";
+      v = "nvim";
     };
   };
 }
