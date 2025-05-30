@@ -1,5 +1,5 @@
 {
-  description = "ZaneyOS";
+  description = "cmdoret-nixos";
 
   inputs = {
     home-manager = {
