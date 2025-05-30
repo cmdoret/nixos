@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs = {
-    firefox.enable = false; # Firefox is not installed by default
+    firefox.enable = true; # Firefox is not installed by default
     dconf.enable = true;
     seahorse.enable = true;
     hyprland.enable = true; #create desktop file and depedencies if you switch to GUI login MGR
@@ -20,8 +20,8 @@
     amfora # Fancy Terminal Browser For Gemini Protocol
     appimage-run # Needed For AppImage Support
     bottom # btop like util
-    brave # Brave Browser
     brightnessctl # For Screen Brightness Control
+    chromium
     cmatrix # Matrix Movie Effect In Terminal
     cowsay # Great Fun Terminal Program
     docker-compose # Allows Controlling Docker From A Single File
