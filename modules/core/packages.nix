@@ -28,8 +28,10 @@
     duf # Utility For Viewing Disk Usage In Terminal
     dysk # disk usage util
     eza # Beautiful ls Replacement
+    fd # find, but better
     ffmpeg # Terminal Video / Audio Editing
     file-roller # Archive Manager
+    fzf # fuzzy finder
     gdu # graphical disk usage
     gedit # Simple Graphical Text Editor
     gimp # Great Photo Editor
