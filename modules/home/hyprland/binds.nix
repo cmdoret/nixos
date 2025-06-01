@@ -7,6 +7,7 @@
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
+      "$modifier,escape,exec,hyprlock --immediate"
       "$modifier,Return,exec,${terminal}"
       "$modifier SHIFT,slash,exec,list-keybinds"
       "$modifier,D,exec,rofi-launcher"
