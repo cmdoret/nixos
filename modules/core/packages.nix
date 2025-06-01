@@ -43,6 +43,7 @@
     hyprpicker # Color Picker
     eog # For Image Viewing
     inxi # CLI System Information Tool
+    just # command runner
     killall # For Killing All Instances Of Programs
     lazygit # Terminal Based Git GUI
     libnotify # For Notifications
@@ -61,9 +62,11 @@
     ripgrep # Improved Grep
     socat # Needed For Screenshots
     sox # audio support for FFMPEG
+    supersonic # audio client for subsonic servers
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
     usbutils # Good Tools For USB Devices
+    uv # python tooling
     v4l-utils # Used For Things Like OBS Virtual Camera
     waypaper # backup wallpaper GUI
     wget # Tool For Fetching Files With Links
