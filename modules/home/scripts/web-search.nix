@@ -9,7 +9,8 @@ pkgs.writeShellScriptBin "web-search" ''
 
   URLS=(
     ["🌎 Search"]="https://duckduckgo.com/?q="
-    ["❄️  Unstable Packages"]="https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query="
+    ["❄️ Unstable Packages"]="https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query="
+    ["🐱 Github"]=https://github.com/search?q="
     ["🎞️ YouTube"]="https://www.youtube.com/results?search_query="
     ["🦥 Arch Wiki"]="https://wiki.archlinux.org/title/"
     ["🐃 Gentoo Wiki"]="https://wiki.gentoo.org/index.php?title="
@@ -25,7 +26,7 @@ pkgs.writeShellScriptBin "web-search" ''
 
   main() {
     # Pass the list to rofi
-    platform=$( (gen_list) | ${pkgs.rofi-wayland}/bin/rofi -dmenu -config ~/.config/rofi/config-long.rasi )
+    platform=$( (gen_list) | ${pkgs.rofi-wayland}/bin/rofi -i -dmenu -config ~/.config/rofi/config-long.rasi )
 
     if [[ -n "$platform" ]]; then
       query=$( (echo ) | ${pkgs.rofi-wayland}/bin/rofi -dmenu -config ~/.config/rofi/config-long.rasi )
