@@ -19,6 +19,7 @@ in {
     ./hyprland
     ./kitty.nix
     ./nvf.nix
+    ./python.nix
     ./rofi
     ./qt.nix
     ./scripts
