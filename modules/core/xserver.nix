@@ -5,7 +5,7 @@ in {
     enable = false;
     xkb = {
       layout = "${keyboardLayout}";
-      variant = "";
+      variant = "altgr-intl";
     };
   };
 }
