@@ -8,7 +8,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$modifier,Return,exec,${terminal}"
-      "$modifier SHIFT,/,exec,list-keybinds"
+      "$modifier SHIFT,slash,exec,list-keybinds"
       "$modifier,D,exec,rofi-launcher"
       "$modifier SHIFT,B,exec,web-search"
       "$modifier ALT,W,exec,wallsetter"
