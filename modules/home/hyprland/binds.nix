@@ -8,8 +8,8 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$modifier,Return,exec,${terminal}"
-      "$modifier,K,exec,list-keybinds"
-      "$modifier SHIFT,Return,exec,rofi-launcher"
+      "$modifier SHIFT,/,exec,list-keybinds"
+      "$modifier,D,exec,rofi-launcher"
       "$modifier SHIFT,B,exec,web-search"
       "$modifier ALT,W,exec,wallsetter"
       "$modifier SHIFT,N,exec,swaync-client -rs"
@@ -17,7 +17,6 @@ in {
       "$modifier,Y,exec,kitty -e yazi"
       "$modifier,E,exec,emopicker9000"
       "$modifier,S,exec,screenshootin"
-      "$modifier,D,exec,discord"
       "$modifier,C,exec,hyprpicker -a"
       "$modifier,T,exec,pypr toggle term"
       "$modifier,M,exec,pavucontrol"
