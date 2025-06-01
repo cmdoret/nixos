@@ -24,6 +24,7 @@
     chromium
     cmatrix # Matrix Movie Effect In Terminal
     cowsay # Great Fun Terminal Program
+    direnv # Automatically enter dev environments on cd
     docker-compose # Allows Controlling Docker From A Single File
     duf # Utility For Viewing Disk Usage In Terminal
     dysk # disk usage util
