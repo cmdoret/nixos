@@ -50,6 +50,24 @@
 
       keymaps = [
         {
+          key = "<tab>";
+          mode = ["n"];
+          action = ":bnext<CR>";
+          desc = "next buffer";
+        }
+        {
+          key = "<S-tab>";
+          mode = ["n"];
+          action = ":bprevious<CR>";
+          desc = "previous buffer";
+        }
+        {
+          key = "<leader>bd";
+          mode = ["n"];
+          action = ":bdelete<CR>";
+          desc = "close buffer";
+        }
+        {
           key = "jk";
           mode = ["i"];
           action = "<ESC>";
@@ -68,16 +86,34 @@
           desc = "Search files by name";
         }
         {
-          key = "<leader>lg";
+          key = "<leader>fw";
           mode = ["n"];
           action = "<cmd>Telescope live_grep<cr>";
           desc = "Search files by contents";
         }
         {
-          key = "<leader>fe";
+          key = "<C-h>";
           mode = ["n"];
-          action = "<cmd>Neotree toggle<cr>";
-          desc = "File browser toggle";
+          action = "<C-W><Left>";
+          desc = "window left";
+        }
+        {
+          key = "<C-j>";
+          mode = ["n"];
+          action = "<C-w><Down>";
+          desc = "window down";
+        }
+        {
+          key = "<C-k>";
+          mode = ["n"];
+          action = "<C-w><Up>";
+          desc = "window up";
+        }
+        {
+          key = "<C-l>";
+          mode = ["n"];
+          action = "<C-w><Right>";
+          desc = "window right";
         }
         {
           key = "<C-h>";
