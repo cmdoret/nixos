@@ -1,0 +1,15 @@
+name: ml-cuda
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+dependencies:
+  - "pytorch=*=*cuda*"
+  - torchvision
+  - torchaudio
+  - cudatoolkit
+  - cudnn
+  - numpy
+  - pandas
+  - scikit-learn
+  - ipython
