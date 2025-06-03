@@ -33,9 +33,16 @@
 
       maps = {
         normal = {
-          "<leader>e" = {
+          "<C-n>" = {
             action = "<CMD>Neotree toggle<CR>";
             silent = false;
+          };
+        };
+        terminal = {
+          "<C-x>" = {
+            action = "<C-\\><C-n>";
+            silent = false;
+            desc = "Exit terminal mode";
           };
         };
       };
@@ -62,7 +69,7 @@
           desc = "previous buffer";
         }
         {
-          key = "<leader>bd";
+          key = "<leader>w";
           mode = ["n"];
           action = ":bdelete<CR>";
           desc = "close buffer";
@@ -90,6 +97,18 @@
           mode = ["n"];
           action = "<cmd>Telescope live_grep<cr>";
           desc = "Search files by contents";
+        }
+        {
+          key = "<M-v>";
+          mode = ["n"];
+          action = "<cmd>vert term<cr>";
+          desc = "Open a terminal in a vertical split.";
+        }
+        {
+          key = "<M-h>";
+          mode = ["n"];
+          action = "<cmd>hor term<cr>";
+          desc = "Open a terminal in a horizontal split.";
         }
         {
           key = "<C-h>";
