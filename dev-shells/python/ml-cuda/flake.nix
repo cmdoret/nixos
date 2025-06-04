@@ -37,6 +37,7 @@
             xorg.libXrandr
             xorg.libXv
             zlib
+            zsh
           ];
 
         profile = ''
@@ -47,11 +48,12 @@
 
           # Auto activate the micromamba env if it exists
           export MAMBA_ROOT_PREFIX=$PWD/.mamba
-          eval "$(micromamba shell hook --shell=bash)"
-          micromamba activate ml-cuda || echo "Run: micromamba env create -f environment.yml"
+          eval "$(micromamba shell hook --shell=zsh)"
+          micromamba env create -f ~/.config/nixos/dev-shells/python/ml-cuda/environment.yml
+          micromamba activate ml-cuda
         '';
 
-        runScript = "bash";
+        runScript = "zsh";
       }).env;
   };
 }
