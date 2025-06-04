@@ -48,7 +48,9 @@
     lazygit # Terminal Based Git GUI
     libnotify # For Notifications
     lm_sensors # Used For Getting Hardware Temps
+    logseq # personal knowledge management
     lolcat # Add Colors To Your Terminal Command Output
+    loupe # gtk based image viewer
     lshw # Detailed Hardware Information
     mpv # Incredible Video Player
     ncdu # Disk Usage Analyzer With Ncurses Interface
