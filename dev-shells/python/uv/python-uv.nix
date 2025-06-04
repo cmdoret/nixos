@@ -10,6 +10,7 @@
   ...
 }: [
   {
+    name = "python-uv";
     packages = [
       # Language Server.
       pkgs.pyright
