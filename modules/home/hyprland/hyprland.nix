@@ -61,6 +61,7 @@ in {
 
       input = {
         kb_layout = "${keyboardLayout}";
+        kb_variant = "altgr-intl";
         kb_options = [
           "caps:escape"
         ];
