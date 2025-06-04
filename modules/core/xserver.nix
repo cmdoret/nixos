@@ -2,7 +2,7 @@
   inherit (import ../../hosts/${host}/variables.nix) keyboardLayout;
 in {
   services.xserver = {
-    enable = false;
+    enable = true;
     xkb = {
       layout = "${keyboardLayout}";
       variant = "altgr-intl";
