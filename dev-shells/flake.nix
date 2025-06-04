@@ -2,10 +2,9 @@
   description = "Master flake for dev shells";
 
   inputs = {
-    # Bring in the subflakes
     ml-cuda.url = "./python/ml-cuda";
     uv.url = "./python/uv";
-
+    r.url = "./r";
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
@@ -15,16 +14,16 @@
     flake-utils,
     ml-cuda,
     uv,
+    r,
     ...
   }:
-    flake-utils.lib.eachDefaultSystem (
-      system: let
-        shells = {
-          "python.ml-cuda" = ml-cuda.devShells.${system}.default;
-          "python.uv" = uv.devShells.${system}.default;
+    flake-utils.lib.eachDefaultSystem (system: {
+      devShells = {
+        python = {
+          ml-cuda = ml-cuda.devShells.${system}.default;
+          uv = uv.devShells.${system}.default;
         };
-      in {
-        devShells = shells;
-      }
-    );
+        r = r.devShells.${system}.default;
+      };
+    });
 }
