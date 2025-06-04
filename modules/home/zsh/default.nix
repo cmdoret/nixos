@@ -40,6 +40,7 @@
     shellAliases = {
       c = "clear";
       cat = "bat";
+      dev = "f() {nix develop --accept-flake-config --no-pure-eval ~/.config/nixos/dev-shells#$1 --command zsh;};f";
       fr = "nh os switch --hostname ${profile}";
       fu = "nh os switch --hostname ${profile} --update";
       ga = "git add";
