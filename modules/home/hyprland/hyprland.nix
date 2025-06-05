@@ -127,10 +127,12 @@ in {
         rounding = 10;
         blur = {
           enabled = true;
-          size = 5;
+          size = 6;
           passes = 3;
-          ignore_opacity = false;
+          ignore_opacity = true;
           new_optimizations = true;
+          xray = false;
+          special = true;
         };
         shadow = {
           enabled = true;
