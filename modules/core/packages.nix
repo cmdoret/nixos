@@ -66,6 +66,7 @@
     sox # audio support for FFMPEG
     supersonic # audio client for subsonic servers
     tealdeer # tldr command reference
+    trayscale # tailscale gui for vpn
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
     usbutils # Good Tools For USB Devices

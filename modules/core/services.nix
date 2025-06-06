@@ -5,6 +5,11 @@
     fstrim.enable = true; # SSD Optimizer
     gvfs.enable = true; # For Mounting USB & More
     openssh.enable = true; # Enable SSH
+    tailscale = {
+      # tailscale vpn
+      enable = true;
+      useRoutingFeatures = "client";
+    };
     blueman.enable = true; # Bluetooth Support
     tumbler.enable = true; # Image/video preview
     gnome.gnome-keyring.enable = true;
