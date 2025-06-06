@@ -1,15 +1,15 @@
 {
   # Git Configuration ( For Pulling Software Repos )
-  gitUsername = "Tyler Kelley";
-  gitEmail = "tylerzanekelley@gmail.com";
+  gitUsername = "cmdoret";
+  gitEmail = "cyril.mattheydoret@gmail.com";
 
   # Hyprland Settings
   # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";
   # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
-  extraMonitorSettings = "";
+  extraMonitorSettings = "monitor = eDP-1,3840x2400@60,auto,2";
 
   # Waybar Settings
-  clock24h = false;
+  clock24h = true;
 
   # Program Options
   browser = "firefox"; # Set Default Browser (google-chrome-stable for google-chrome)
