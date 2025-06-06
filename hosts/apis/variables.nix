@@ -28,15 +28,15 @@
   printEnable = false;
 
   # Set Stylix Image
-  stylixImage = ../../wallpapers/beautifulmountainscape.jpg;
+  stylixImage = ../../wallpapers/pine.jpg;
 
   # Set Waybar
   #  Available Options:
   #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;
   #waybarChoice = ../../modules/home/waybar/waybar-ddubs-2.nix;
-  #waybarChoice = ../../modules/home/waybar/Jerry-waybar.nix;
-  waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
+  waybarChoice = ../../modules/home/waybar/Jerry-waybar.nix;
+  #waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
 
   # Set Animation style
   # Available options are:
