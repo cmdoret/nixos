@@ -6,6 +6,7 @@
 }: let
   inherit
     (import ../../../hosts/${host}/variables.nix)
+    avatarImage
     extraMonitorSettings
     keyboardLayout
     stylixImage
@@ -30,8 +31,8 @@ in {
       source = ../../../wallpapers;
       recursive = true;
     };
-    ".face.icon".source = ./avatar/${host}.jpg;
-    ".config/face.jpg".source = ./avatar/${host}.jpg;
+    ".face.icon".source = ./avatar/${avatarImage};
+    ".config/face.jpg".source = ./avatar/${avatarImage};
   };
   wayland.windowManager.hyprland = {
     enable = true;

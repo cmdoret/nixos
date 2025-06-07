@@ -27,8 +27,13 @@
   # Enable Printing Support
   printEnable = false;
 
+  # Set hyprland images
+  # among files in ./modules/home/hyprland/avatar, filename only, must be .jpg
+  avatarImage = "sdsc.jpg";
+  # among files in ./wallpapers, filename only
+  lockScreenImage = "falling-stars-landscape.png";
   # Set Stylix Image
-  stylixImage = ../../wallpapers/pine.jpg;
+  stylixImage = ../../wallpapers/falling-stars-landscape.png;
 
   # Set Waybar
   #  Available Options:

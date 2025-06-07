@@ -27,6 +27,11 @@
   # Enable Printing Support
   printEnable = false;
 
+  # Set hyprland images
+  # among files in ./modules/home/hyprland/avatar, filename only, must be .jpg
+  avatarImage = "sootball.jpg";
+  # among files in ./wallpapers, filename only
+  lockScreenImage = "beautifulmountainscape.jpg";
   # Set Stylix Image
   stylixImage = ../../wallpapers/beautifulmountainscape.jpg;
 

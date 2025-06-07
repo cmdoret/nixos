@@ -1,4 +1,10 @@
-{username, ...}: {
+{
+  username,
+  host,
+  ...
+}: let
+  inherit (import ../../../hosts/${host}/variables.nix) lockScreenImage;
+in {
   programs.hyprlock = {
     enable = true;
     settings = {
@@ -10,7 +16,7 @@
       };
       background = [
         {
-          path = "/home/${username}/Pictures/Wallpapers/beautifulmountainscape.jpg";
+          path = "/home/${username}/Pictures/Wallpapers/${lockScreenImage}";
           blur_passes = 3;
           blur_size = 8;
         }
