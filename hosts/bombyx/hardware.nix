@@ -12,25 +12,29 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["xhci_pci" "nvme" "usb_storage" "sd_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-intel"];
-  boot.extraModulePackages = [];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/NIXROOT";
-    fsType = "ext4";
+  boot = {
+    initrd = {
+      availableKernelModules = ["xhci_pci" "nvme" "usb_storage" "sd_mod"];
+      kernelModules = [];
+    };
+    kernelModules = ["kvm-intel"];
+    extraModulePackages = [];
   };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-label/NIXBOOT";
-    fsType = "vfat";
-    options = ["fmask=0022" "dmask=0022"];
-  };
-
-  fileSystems."/data" = {
-    device = "/dev/nvme0n1p1";
-    fsType = "ext4";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-label/NIXROOT";
+      fsType = "ext4";
+    };
+    "/boot" = {
+      device = "/dev/disk/by-label/NIXBOOT";
+      fsType = "vfat";
+      options = ["fmask=0022" "dmask=0022"];
+    };
+    "/data" = {
+      device = "/dev/nvme0n1p1";
+      fsType = "ext4";
+    };
   };
 
   swapDevices = [];
