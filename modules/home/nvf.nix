@@ -50,7 +50,15 @@
       diagnostics = {
         enable = true;
         config = {
-          virtual_lines.enable = true;
+          signs = {
+            text = {
+              "vim.diagnostic.severity.ERROR" = "󰅚 ";
+              "vim.diagnostic.severity.WARN" = "󰀪 ";
+            };
+          };
+          float = {
+            border = ["╔" "═" "╗" "║" "╝" "═" "╚" "║"];
+          };
           underline = true;
         };
       };
@@ -101,14 +109,20 @@
         {
           key = "<M-v>";
           mode = ["n"];
-          action = "<cmd>vert term<cr>";
-          desc = "Open a terminal in a vertical split.";
+          action = "<cmd>ToggleTerm direction=vertical<cr>";
+          desc = "toggle vertical terminal.";
         }
         {
           key = "<M-h>";
           mode = ["n"];
-          action = "<cmd>hor term<cr>";
-          desc = "Open a terminal in a horizontal split.";
+          action = "<cmd>ToggleTerm direction=horizontal<cr>";
+          desc = "toggle horizontal terminal.";
+        }
+        {
+          key = "<M-i>";
+          mode = ["n"];
+          action = "<cmd>ToggleTerm direction=float<cr>";
+          desc = "toggle floating terminal.";
         }
         {
           key = "<C-h>";
@@ -279,6 +293,12 @@
           image-nvim.enable = false;
         };
       };
+      terminal = {
+        toggleterm = {
+          enable = true;
+          lazygit.enable = true;
+        };
+      };
       ui = {
         borders.enable = true;
         noice.enable = true;
@@ -317,10 +337,6 @@
       vim.notify("Custom Lua loaded", vim.log.levels.INFO)
       -- Diagnostics configuration (fallback)
       vim.diagnostic.config({
-        virtual_text = {
-          spacing = 4,
-          prefix = "●"
-        },
         signs = true,
         underline = true,
         update_in_insert = false,
