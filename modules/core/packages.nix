@@ -44,6 +44,8 @@
     eog # For Image Viewing
     inxi # CLI System Information Tool
     just # command runner
+    keybase # key mgmt + encrypted msg/storage
+    keybase-gui
     killall # For Killing All Instances Of Programs
     lazygit # Terminal Based Git GUI
     libnotify # For Notifications

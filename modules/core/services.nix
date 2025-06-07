@@ -11,6 +11,8 @@
       useRoutingFeatures = "client";
     };
     blueman.enable = true; # Bluetooth Support
+    keybase.enable = true;
+    kbfs.enable = true;
     tumbler.enable = true; # Image/video preview
     gnome.gnome-keyring.enable = true;
 
