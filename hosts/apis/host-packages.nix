@@ -1,8 +1,11 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    audacity
     discord
     nodejs
     obs-studio
+    slack
+    vesktop # OSS discord client
+    webex
+    zoom-us
   ];
 }
