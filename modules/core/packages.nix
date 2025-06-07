@@ -64,10 +64,12 @@
     playerctl # Allows Changing Media Volume Through Scripts
     rhythmbox
     ripgrep # Improved Grep
+    signal-desktop # messaging
     socat # Needed For Screenshots
     sox # audio support for FFMPEG
     supersonic # audio client for subsonic servers
     tealdeer # tldr command reference
+    telegram-desktop # messaging
     trayscale # tailscale gui for vpn
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
