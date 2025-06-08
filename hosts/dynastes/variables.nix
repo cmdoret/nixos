@@ -29,7 +29,7 @@
 
   # Set hyprland images
   # among files in ./modules/home/hyprland/avatar, filename only, must be .jpg
-  avatarImage = "sootball.jpg";
+  avatarImage = "dynastes-neon.jpg";
   # among files in ./wallpapers, filename only
   lockScreenImage = "china-skyscrapers-night.jpg";
   rofiImage = "neon-buildings-down.jpg";
