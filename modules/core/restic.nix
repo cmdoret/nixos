@@ -16,13 +16,14 @@
         "/home"
         "/data"
       ];
-      repository = "/mnt/backup/${host}_daily";
+      pruneOpts = ["--keep-daily=7" "--keep-weekly=4" "--keep-monthly=6"];
+      repository = "/mnt/backup/${host}_restic";
       passwordFile = "/etc/nixos/restic-password";
       timerConfig = {
         OnCalendar = "12:10";
         Persistent = true;
       };
-      user = "restic";
+      user = "root";
     };
   };
 }
