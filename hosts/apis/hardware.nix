@@ -37,6 +37,11 @@
       fsType = "vfat";
       options = ["fmask=0022" "dmask=0022"];
     };
+    "/mnt/backup" = {
+      device = "192.168.1.151:/mnt/vault/backup/apis";
+      fsType = "nfs";
+      options = ["x-systemd.automount" "noauto"];
+    };
   };
 
   swapDevices = [
