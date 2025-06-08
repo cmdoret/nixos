@@ -27,6 +27,7 @@
     direnv # Automatically enter dev environments on cd
     docker-compose # Allows Controlling Docker From A Single File
     duf # Utility For Viewing Disk Usage In Terminal
+    du-dust # faster better du
     dysk # disk usage util
     eza # Beautiful ls Replacement
     fd # find, but better
@@ -42,6 +43,7 @@
     htop # Simple Terminal Based System Monitor
     hyprpicker # Color Picker
     eog # For Image Viewing
+    inkscape # vector image editing
     inxi # CLI System Information Tool
     just # command runner
     keybase # key mgmt + encrypted msg/storage
