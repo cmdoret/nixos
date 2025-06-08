@@ -11,6 +11,7 @@
     ./nh.nix
     ./packages.nix
     ./printing.nix
+    ./restic.nix
     ./security.nix
     ./services.nix
     ./starfish.nix
