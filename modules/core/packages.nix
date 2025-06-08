@@ -55,6 +55,8 @@
     loupe # gtk based image viewer
     lshw # Detailed Hardware Information
     mpv # Incredible Video Player
+    mullvad-vpn # VPN client
+    mullvad-browser # privacy-hardened browser
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nixfmt-rfc-style # Nix Formatter
     pavucontrol # For Editing Audio Levels & Devices
