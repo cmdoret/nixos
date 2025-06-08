@@ -32,6 +32,7 @@
   avatarImage = "sdsc.jpg";
   # among files in ./wallpapers, filename only
   lockScreenImage = "pine.jpg";
+  rofiImage = "pine.jpg";
   # Set Stylix Image
   stylixImage = ../../wallpapers/depth-of-field-blurred-plants.jpg;
 

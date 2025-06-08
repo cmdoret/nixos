@@ -32,6 +32,7 @@
   avatarImage = "sootball.jpg";
   # among files in ./wallpapers, filename only
   lockScreenImage = "beautifulmountainscape.jpg";
+  rofiImage = "Rainnight.jpg";
   # Set Stylix Image
   stylixImage = ../../wallpapers/beautifulmountainscape.jpg;
 
