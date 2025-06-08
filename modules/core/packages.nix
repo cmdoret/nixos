@@ -66,6 +66,7 @@
     picard # For Changing Music Metadata & Getting Cover Art
     pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
     playerctl # Allows Changing Media Volume Through Scripts
+    p7zip # compression utility
     rhythmbox
     ripgrep # Improved Grep
     signal-desktop # messaging
@@ -83,5 +84,6 @@
     waypaper # backup wallpaper GUI
     wget # Tool For Fetching Files With Links
     ytmdl # Tool For Downloading Audio From YouTube
+    zip # compression utility
   ];
 }
