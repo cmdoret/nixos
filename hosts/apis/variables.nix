@@ -31,9 +31,9 @@
   # among files in ./modules/home/hyprland/avatar, filename only, must be .jpg
   avatarImage = "sdsc.jpg";
   # among files in ./wallpapers, filename only
-  lockScreenImage = "falling-stars-landscape.png";
+  lockScreenImage = "pine.jpg";
   # Set Stylix Image
-  stylixImage = ../../wallpapers/falling-stars-landscape.png;
+  stylixImage = ../../wallpapers/depth-of-field-blurred-plants.jpg;
 
   # Set Waybar
   #  Available Options:
@@ -49,7 +49,7 @@
   # animations-end4.nix (end-4 project)
   # animations-dynamic.nix (ml4w project)
   # animations-moving.nix (ml4w project)
-  animChoice = ../../modules/home/hyprland/animations-dynamic.nix;
+  animChoice = ../../modules/home/hyprland/animations-end4.nix;
 
   # Enable Thunar GUI File Manager
   thunarEnable = true;
