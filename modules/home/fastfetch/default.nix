@@ -1,4 +1,8 @@
 {
+  host,
+  username,
+  ...
+}: {
   programs.fastfetch = {
     enable = true;
 
@@ -26,7 +30,7 @@
         "break"
         {
           type = "os";
-          key = "cmdoret-nixos";
+          key = "${username}@${host}";
           keyColor = "31";
         }
         {
