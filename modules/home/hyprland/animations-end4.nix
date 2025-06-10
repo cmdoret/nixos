@@ -29,7 +29,7 @@
         "layersIn, 1, 3, menu_decel, slide"
         "layersOut, 1, 1.6, menu_accel"
         "fadeLayersIn, 1, 2, menu_decel"
-        "fadeLayersOut, 1, 4.5, menu_accel"
+        "fadeLayersOut, 1, 1.5, menu_accel"
         "workspaces, 1, 7, menu_decel, slide"
       ];
     };
