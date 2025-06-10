@@ -91,6 +91,10 @@ in {
       ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
       ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
     ];
+    bindl = [
+      ",switch:on:Lid Switch, exec, hyprctl keyword monitor \"eDP-1, disable\""
+      ",switch:off:Lid Switch, exec, hyprctl keyword monitor \"eDP-1, preferred, 0x0, 1\""
+    ];
 
     bindm = [
       "$modifier, mouse:272, movewindow"
