@@ -31,6 +31,13 @@
         };
       };
 
+      assistant = {
+        copilot = {
+          enable = true;
+          cmp.enable = true;
+        };
+        codecompanion-nvim.enable = true;
+      };
       maps = {
         normal = {
           "<C-n>" = {
