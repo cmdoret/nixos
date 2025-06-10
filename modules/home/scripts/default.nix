@@ -8,6 +8,7 @@
     (import ./keybinds.nix {inherit pkgs;})
     (import ./task-waybar.nix {inherit pkgs;})
     (import ./squirtle.nix {inherit pkgs;})
+    (import ./hypr-lid-close.nix {inherit pkgs;})
     (import ./wololo.nix {inherit pkgs;})
     (import ./nvidia-offload.nix {inherit pkgs;})
     (import ./wallsetter.nix {

@@ -93,7 +93,7 @@ in {
       ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
     ];
     bindl = [
-      ",switch:on:Lid Switch, exec, hyprctl keyword monitor \"eDP-1, disable\""
+      ",switch:on:Lid Switch, exec, hypr-lid-close"
       ",switch:off:Lid Switch, exec, hyprctl keyword monitor \"eDP-1, preferred, 0x0, 1\""
     ];
 

@@ -45,6 +45,7 @@
     eog # For Image Viewing
     inkscape # vector image editing
     inxi # CLI System Information Tool
+    jq # json manipulation tool
     just # command runner
     keybase # key mgmt + encrypted msg/storage
     keybase-gui
