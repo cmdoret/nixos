@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     feishin
+    kubectl
+    k9s
     nodejs
     obs-studio
     slack
