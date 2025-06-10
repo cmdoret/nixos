@@ -18,6 +18,7 @@ in {
       "$modifier,Y,exec,kitty -e yazi"
       "$modifier,E,exec,emopicker9000"
       "$modifier,S,exec,screenshootin"
+      "$modifier SHIFT,S,exec,wlogout"
       "$modifier,C,exec,hyprpicker -a"
       "$modifier,T,exec,pypr toggle term"
       "$modifier,M,exec,pavucontrol"
