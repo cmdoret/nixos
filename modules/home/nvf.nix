@@ -234,7 +234,7 @@
         };
         html.enable = true;
         lua.enable = true;
-        css.enable = true;
+        css.enable = false;
         typst.enable = true;
         rust = {
           enable = true;
