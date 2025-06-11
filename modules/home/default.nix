@@ -18,6 +18,7 @@ in {
     ./htop.nix
     ./hyprland
     ./kitty.nix
+    ./k9s.nix
     ./nvf.nix
     ./python.nix
     ./rofi
