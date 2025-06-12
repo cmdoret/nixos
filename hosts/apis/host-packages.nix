@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     feishin
     kubectl
+    libreoffice
     nodejs
     obs-studio
     slack
