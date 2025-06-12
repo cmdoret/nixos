@@ -278,7 +278,7 @@
         gitsigns.codeActions.enable = false;
       };
       projects.project-nvim.enable = true;
-      dashboard.dashboard-nvim.enable = true;
+      dashboard.dashboard-nvim.enable = false;
       filetree.neo-tree.enable = true;
       notify = {
         nvim-notify.enable = true;
