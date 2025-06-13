@@ -10,7 +10,7 @@
         imageScans.enabled = false;
         ui = {
           skin = "skin";
-          headless = true;
+          headless = false;
           logoless = true;
           crumbsless = false;
           splashless = true;
