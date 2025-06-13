@@ -180,6 +180,24 @@
           desc = "Move right in insert mode";
         }
         {
+          key = "gd";
+          mode = "n";
+          action = "<cmd>lua vim.lsp.buf.definition()<CR>";
+          desc = "Go to definition";
+        }
+        {
+          key = "gD";
+          mode = "n";
+          action = "<cmd>lua vim.lsp.buf.declaration()<CR>";
+          desc = "Go to declaration";
+        }
+        {
+          key = "gr";
+          mode = "n";
+          action = "<cmd>lua vim.lsp.buf.references()<CR>";
+          desc = "Go to references";
+        }
+        {
           key = "<leader>dj";
           mode = ["n"];
           action = "<cmd>Lspsaga diagnostic_jump_next<CR>";
