@@ -47,10 +47,14 @@
       gc = "git commit";
       gp = "git push";
       gs = "git status";
+      k = "kubectl";
+      kg = "kubectl get";
+      ka = "kubectl apply";
       la = "eza --icons -lah --group-directories-first -1";
       ll = "eza --icons -lh --group-directories-first -1 --no-user --long";
       ls = "eza --icons --group-directories-first -1";
       man = "batman";
+      mp4-shrink = "f() {ffmpeg -i \"$1\" -vcodec libx265 -crf 28 \"$2\";};f";
       ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       sv = "sudo nvim";
       tree = "eza --icons --tree --group-directories-first";
