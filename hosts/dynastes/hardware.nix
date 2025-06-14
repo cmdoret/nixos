@@ -50,7 +50,15 @@
     "/mnt/backup" = {
       device = "192.168.1.151:/mnt/vault/backup/dynastes";
       fsType = "nfs";
-      options = ["x-systemd.automount" "noauto"];
+      options = [
+        "x-systemd.automount"
+        "noauto"
+        "x-systemd.idle-timeout=300"
+        "x-systemd.mount-timeout=5"
+        "noatime"
+        "soft"
+        "nfsvers=4.0"
+      ];
     };
   };
 
