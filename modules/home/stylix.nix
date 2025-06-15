@@ -8,5 +8,6 @@ _: {
     rofi.enable = false;
     vesktop.enable = true;
     waybar.enable = false;
+    nvf.enable = false;
   };
 }

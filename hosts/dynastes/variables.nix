@@ -36,6 +36,10 @@
   # Set Stylix Image
   stylixImage = ../../wallpapers/neon-buildings-down.jpg;
 
+  # Syntax highlighting theme in neovim
+  vimTheme = "dracula";
+  vimLineTheme = "dracula";
+
   # Set Waybar
   #  Available Options:
   #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;

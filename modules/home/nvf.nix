@@ -1,8 +1,11 @@
 {
   inputs,
+  host,
   config,
   ...
-}: {
+}: let
+  inherit (import ../../hosts/${host}/variables.nix) vimTheme vimLineTheme;
+in {
   imports = [inputs.nvf.homeManagerModules.default];
 
   programs.nvf = {
@@ -278,7 +281,12 @@
 
       statusline.lualine = {
         enable = true;
-        theme = "base16";
+        theme = "${vimLineTheme}";
+      };
+      theme = {
+        enable = true;
+        name = "${vimTheme}";
+        style = "dark";
       };
 
       autopairs.nvim-autopairs.enable = true;

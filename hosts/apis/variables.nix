@@ -39,6 +39,10 @@
   # Set Stylix Image
   stylixImage = ../../wallpapers/depth-of-field-blurred-plants.jpg;
 
+  # Syntax highlighting theme in neovim
+  vimTheme = "gruvbox";
+  vimLineTheme = "gruvbox";
+
   # Set Waybar
   #  Available Options:
   #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;
