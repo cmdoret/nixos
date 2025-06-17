@@ -4,6 +4,7 @@
     feishin
     nodejs
     obs-studio
+    osu-lazer-bin
     vesktop
   ];
 }
