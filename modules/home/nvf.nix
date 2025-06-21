@@ -315,11 +315,23 @@ in {
         ccc.enable = false;
         vim-wakatime.enable = false;
         icon-picker.enable = true;
-        surround.enable = true;
+        surround = {
+          enable = true;
+          useVendoredKeybindings = false;
+        };
         diffview-nvim.enable = true;
         motion = {
-          hop.enable = true;
-          leap.enable = true;
+          hop.enable = false;
+          leap = {
+            enable = true;
+            mappings = {
+              leapBackwardTill = "zk";
+              leapBackwardTo = "zK";
+              leapForwardTill = "zj";
+              leapForwardTo = "zJ";
+              leapFromWindow = "zw";
+            };
+          };
           precognition.enable = false;
         };
         images = {
