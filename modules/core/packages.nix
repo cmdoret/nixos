@@ -82,6 +82,7 @@
     usbutils # Good Tools For USB Devices
     uv # python tooling
     v4l-utils # Used For Things Like OBS Virtual Camera
+    warp # file transfer
     waypaper # backup wallpaper GUI
     wget # Tool For Fetching Files With Links
     ytmdl # Tool For Downloading Audio From YouTube
