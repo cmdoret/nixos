@@ -38,7 +38,7 @@
 
   # Syntax highlighting theme in neovim
   # See: https://github.com/NotAShelf/nvf/blob/main/modules/plugins/theme/supported-themes.nix
-  vimTheme = "catpuccin";
+  vimTheme = "github";
   #  See: https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
   vimLineTheme = "horizon";
 
