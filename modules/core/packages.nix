@@ -19,6 +19,7 @@
   environment.systemPackages = with pkgs; [
     #amfora # Fancy Terminal Browser For Gemini Protocol
     appimage-run # Needed For AppImage Support
+    bitwarden-desktop # password manager
     bottom # btop like util
     brightnessctl # For Screen Brightness Control
     chromium
