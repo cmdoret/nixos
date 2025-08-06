@@ -86,6 +86,7 @@
     warp # file transfer
     waypaper # backup wallpaper GUI
     wget # Tool For Fetching Files With Links
+    wireguard-tools # VPN
     ytmdl # Tool For Downloading Audio From YouTube
     zed-editor # IDE
     zip # compression utility
