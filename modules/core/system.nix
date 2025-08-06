@@ -1,4 +1,8 @@
-{host, ...}: let
+{
+  host,
+  pkgs,
+  ...
+}: let
   inherit (import ../../hosts/${host}/variables.nix) consoleKeyMap;
 in {
   nix = {
@@ -15,6 +19,14 @@ in {
   };
   time.timeZone = "Europe/Zurich";
   i18n.defaultLocale = "en_US.UTF-8";
+  i18n.inputMethod = {
+    enable = true;
+    type = "ibus";
+    ibus.engines = with pkgs.ibus-engines; [
+      anthy
+      libpinyin
+    ];
+  };
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "fr_CH.UTF-8";

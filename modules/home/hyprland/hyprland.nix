@@ -58,6 +58,7 @@ in {
         "nm-applet --indicator"
         "pypr &"
         "sleep 1.5 && swww img ${stylixImage}"
+        #"ibus start --type wayland" # TODO uncomment this once ibus 1.53.2 is available -> wayland protocol 2 support
       ];
 
       input = {
