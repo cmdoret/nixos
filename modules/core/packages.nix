@@ -53,6 +53,7 @@
     killall # For Killing All Instances Of Programs
     lazygit # Terminal Based Git GUI
     libnotify # For Notifications
+    libreoffice # office suite
     lm_sensors # Used For Getting Hardware Temps
     logseq # personal knowledge management
     lolcat # Add Colors To Your Terminal Command Output
@@ -62,6 +63,7 @@
     mullvad-vpn # VPN client
     mullvad-browser # privacy-hardened browser
     ncdu # Disk Usage Analyzer With Ncurses Interface
+    nextcloud-client # Personal cloud-storage
     nixfmt-rfc-style # Nix Formatter
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
