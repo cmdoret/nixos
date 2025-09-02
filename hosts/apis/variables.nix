@@ -28,7 +28,7 @@
   enableNFS = true;
 
   # Enable Printing Support
-  printEnable = false;
+  printEnable = true;
 
   # Set hyprland images
   # among files in ./modules/home/hyprland/avatar, filename only, must be .jpg
