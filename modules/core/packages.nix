@@ -39,6 +39,7 @@
     gdu # graphical disk usage
     gedit # Simple Graphical Text Editor
     gimp # Great Photo Editor
+    git-lfs # large file support for git
     glxinfo # Needed for inxi -G GPU info
     gping #graphical ping
     greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
