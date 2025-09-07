@@ -22,8 +22,9 @@
     bitwarden-desktop # password manager
     bottom # btop like util
     brightnessctl # For Screen Brightness Control
-    chromium
+    chromium # web browser
     cmatrix # Matrix Movie Effect In Terminal
+    comma # Find + run nix package based on command (using nix-index)
     cowsay # Great Fun Terminal Program
     cryptomator # Encryption for cloud files
     direnv # Automatically enter dev environments on cd
@@ -67,6 +68,7 @@
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nextcloud-client # Personal cloud-storage
     nixfmt-rfc-style # Nix Formatter
+    nix-index # For Searching Nix Packages
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
     picard # For Changing Music Metadata & Getting Cover Art
