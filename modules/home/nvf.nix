@@ -306,6 +306,7 @@ in {
       projects.project-nvim.enable = true;
       dashboard.dashboard-nvim.enable = false;
       filetree.neo-tree.enable = true;
+      filetree.neo-tree.setupOpts.auto_clean_after_session_restore = true;
       notify = {
         nvim-notify.enable = true;
         nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
