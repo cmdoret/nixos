@@ -235,7 +235,7 @@ in {
       };
 
       lsp = {
-        formatOnSave = true;
+        formatOnSave = false;
         lspkind.enable = false;
         lightbulb.enable = false;
         lspsaga.enable = false;
