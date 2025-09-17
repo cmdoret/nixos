@@ -83,6 +83,7 @@
     supersonic # audio client for subsonic servers
     tealdeer # tldr command reference
     telegram-desktop # messaging
+    thunderbird # mail client
     trayscale # tailscale gui for vpn
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
