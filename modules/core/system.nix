@@ -21,10 +21,11 @@ in {
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.inputMethod = {
     enable = true;
-    type = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [
-      anthy
-      libpinyin
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-chinese-addons
+      fcitx5-gtk
     ];
   };
 

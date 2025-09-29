@@ -1,5 +1,6 @@
 _: {
   stylix.targets = {
+    fcitx5.enable = true;
     ghostty.enable = false;
     hyprland.enable = false;
     hyprlock.enable = false;
