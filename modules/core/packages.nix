@@ -18,6 +18,7 @@
 
   environment.systemPackages = with pkgs; [
     #amfora # Fancy Terminal Browser For Gemini Protocol
+    anki # flashcard and SRS program
     appimage-run # Needed For AppImage Support
     bitwarden-desktop # password manager
     bottom # btop like util
