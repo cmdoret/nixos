@@ -16,7 +16,7 @@
     ./security.nix
     ./services.nix
     ./starfish.nix
-    ./steam.nix
+    #./steam.nix
     ./stylix.nix
     ./syncthing.nix
     ./system.nix

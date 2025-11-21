@@ -20,6 +20,7 @@ in {
     ./kitty.nix
     ./k9s.nix
     ./nvf.nix
+    ./poweralertd.nix
     ./python.nix
     ./rofi
     ./qt.nix
