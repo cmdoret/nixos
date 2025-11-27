@@ -8,7 +8,7 @@
   # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
   extraMonitorSettings = ''
     monitor = eDP-1,3840x2400@60,0x0,2
-    monitor = DP-5,preferred,0x0,1
+    monitor = DP-5,preferred,3840x2400,1
   '';
 
   # Waybar Settings

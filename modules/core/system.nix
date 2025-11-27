@@ -41,7 +41,7 @@ in {
     LC_TIME = "en_DK.UTF-8"; # English + ISO 8601 dates
   };
   environment.variables = {
-    ZANEYOS_VERSION = "2.3";
+    ZANEYOS_VERSION = "2.4.1";
     ZANEYOS = "true";
   };
   console.keyMap = "${consoleKeyMap}";
