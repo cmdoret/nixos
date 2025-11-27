@@ -8,6 +8,8 @@
       exclude = [
         "/home/*/.cache"
         "/home/*/.steam"
+        "/home/*/Nextcloud"
+        "/home/*/.local/share/containers"
       ];
       inhibitsSleep = true;
       initialize = true;

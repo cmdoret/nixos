@@ -31,7 +31,7 @@
     direnv # Automatically enter dev environments on cd
     docker-compose # Allows Controlling Docker From A Single File
     duf # Utility For Viewing Disk Usage In Terminal
-    du-dust # faster better du
+    dust # faster better du
     dysk # disk usage util
     eza # Beautiful ls Replacement
     fd # find, but better
@@ -42,9 +42,9 @@
     gedit # Simple Graphical Text Editor
     gimp # Great Photo Editor
     git-lfs # large file support for git
-    glxinfo # Needed for inxi -G GPU info
+    mesa-demos # Needed for inxi -G GPU info
     gping #graphical ping
-    greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
+    tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
     htop # Simple Terminal Based System Monitor
     hyprpicker # Color Picker
     eog # For Image Viewing
