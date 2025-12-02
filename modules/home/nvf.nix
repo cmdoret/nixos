@@ -265,7 +265,10 @@ in {
         };
         html.enable = true;
         lua.enable = true;
-        css.enable = false;
+        css = {
+          enable = false;
+          format.type = "prettierd";
+        };
         typst.enable = true;
         rust = {
           enable = true;
