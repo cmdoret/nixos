@@ -89,7 +89,7 @@ in {
         {
           key = "<leader>w";
           mode = ["n"];
-          action = ":bdelete<CR>";
+          action = ":bprevious | :bdelete #<CR>";
           desc = "close buffer";
         }
         {
