@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   host,
   config,
   ...
@@ -61,10 +62,12 @@ in {
         enable = true;
         config = {
           signs = {
-            text = {
-              "vim.diagnostic.severity.ERROR" = "󰅚 ";
-              "vim.diagnostic.severity.WARN" = "󰀪 ";
-            };
+            text = lib.generators.mkLuaInline ''
+            {
+              [vim.diagnostic.severity.ERROR] = "",
+              [vim.diagnostic.severity.WARN] = "",
+            }
+            '';
           };
           float = {
             border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
