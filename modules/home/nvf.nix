@@ -272,7 +272,7 @@ in {
         typst.enable = true;
         rust = {
           enable = true;
-          crates.enable = true;
+          crates.enable = false;
         };
       };
       visuals = {
