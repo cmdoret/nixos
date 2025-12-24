@@ -15,6 +15,19 @@ in
 
   config = mkIf cfg.enable {
     services.xserver.videoDrivers = [ "nvidia" ];
+
+    ## Ensure no conflicting drivers ever bind the GPU
+    boot.blacklistedKernelModules = [
+      "nouveau"
+      "nova_core"
+      "nova_drm"
+      "nova_modeset"
+    ];
+
+    hardware.graphics = {
+      # Extra packages for Nvidia
+      extraPackages = with pkgs; [ nvidia-vaapi-driver ]; 
+    };
     hardware.nvidia = {
       # Modesetting is required.
       modesetting.enable = true;
