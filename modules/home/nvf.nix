@@ -40,7 +40,7 @@ in {
           enable = true;
           cmp.enable = true;
         };
-        codecompanion-nvim.enable = true;
+        codecompanion-nvim.enable = false;
       };
       maps = {
         normal = {
@@ -260,19 +260,18 @@ in {
         ts = {
           enable = true;
           lsp.enable = true;
-          format.type = "prettierd";
+          format.type = ["prettierd"];
           extensions.ts-error-translator.enable = true;
         };
         html.enable = true;
         lua.enable = true;
         css = {
           enable = false;
-          format.type = "prettierd";
+          format.type = ["prettierd"];
         };
         typst.enable = true;
         rust = {
           enable = true;
-          crates.enable = false;
         };
       };
       visuals = {
