@@ -10,6 +10,7 @@
     ./nfs.nix
     ./nh.nix
     ./nix-ld.nix
+    ./nix.nix
     ./packages.nix
     ./printing.nix
     ./restic.nix
