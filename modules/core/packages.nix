@@ -96,6 +96,7 @@
     wget # Tool For Fetching Files With Links
     wireguard-tools # VPN
     ytmdl # Tool For Downloading Audio From YouTube
+    zathura # PDF Viewer
     zed-editor # IDE
     zip # compression utility
   ];
