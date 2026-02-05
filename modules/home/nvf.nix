@@ -1,5 +1,6 @@
 {
   inputs,
+  pkgs,
   lib,
   host,
   config,
@@ -76,6 +77,12 @@ in {
         };
       };
 
+      extraPlugins = {
+        nvim-spectre = {
+          package = pkgs.vimPlugins.nvim-spectre;
+          setup = "require('spectre').setup {}";
+        };
+      };
       keymaps = [
         {
           key = "<tab>";
@@ -226,6 +233,24 @@ in {
           mode = ["n"];
           action = "<cmd>Trouble diagnostics toggle<cr>";
           desc = "Toggle diagnostics list";
+        }
+        {
+          key = "<leader>tc";
+          mode = ["n"];
+          action = "<cmd>Copilot toggle<CR>";
+          desc = "Toggle Copilot";
+        }
+        {
+          key = "<leader>sw";
+          mode = ["n"];
+          action = "<cmd>lua require('spectre').open_visual({select_word=true})<CR>";
+          desc = "Search current word.";
+        }
+        {
+          key = "<leader>sw";
+          mode = ["v"];
+          action = "<cmd>lua require('spectre').open_visual()<CR>";
+          desc = "Search current word.";
         }
       ];
 
