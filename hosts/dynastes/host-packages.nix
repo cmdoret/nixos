@@ -2,8 +2,8 @@
   environment.systemPackages = with pkgs; [
     audacity
     feishin
+    freecad # computer assisted design
     lutris
-    nodejs
     obs-studio
     osu-lazer-bin
     vesktop
