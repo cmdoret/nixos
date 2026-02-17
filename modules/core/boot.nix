@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 
 {
   boot = {
@@ -6,8 +6,12 @@
     kernelModules = [ "v4l2loopback" ];
     extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
     kernel.sysctl = { "vm.max_map_count" = 2147483642; };
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
+    loader = {
+      efi.canTouchEfiVariables = true;
+      systemd-boot.enable = true;
+      # Keep the last 10 generations
+      systemd-boot.configurationLimit = lib.mkDefault 10;
+    };
     # Appimage Support
     binfmt.registrations.appimage = {
       wrapInterpreterInShell = false;
