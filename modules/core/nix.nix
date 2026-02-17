@@ -16,6 +16,15 @@
     # Making legacy nix commands consistent as well, awesome!
     nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
 
+    # Deduplicate and optimize nix store
+    # Don't do it on every build (slow)
+    settings.auto-optimise-store = false;
+    # Optimize once a day
+    optimise = {
+      automatic = true;
+      dates = [ "daily" ];
+    };
+
     settings = {
       download-buffer-size = 250000000;
       # Enable flakes and new 'nix' command
@@ -23,8 +32,6 @@
         "nix-command"
         "flakes"
       ];
-      # Deduplicate and optimize nix store
-      auto-optimise-store = true;
 
       # Add your own username to the trusted list
       trusted-users = [ "@wheel" ];
