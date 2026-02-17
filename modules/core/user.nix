@@ -24,6 +24,14 @@ in {
     };
   };
   users.mutableUsers = true;
+  programs.zsh.enable = true;
+  users.users.root = {
+    shell = pkgs.zsh;
+    extraGroups = ["networkmanager" "wheel"];
+    # Don't set a password, this will disable password login for root
+    hashedPassword = null;
+    initialHashedPassword = null;
+  };
   users.users.${username} = {
     isNormalUser = true;
     description = "${gitUsername}";
@@ -39,5 +47,5 @@ in {
     shell = pkgs.zsh;
     ignoreShellProgramCheck = true;
   };
-  nix.settings.allowed-users = ["${username}"];
+  nix.settings.allowed-users = [ "@wheel" ];
 }

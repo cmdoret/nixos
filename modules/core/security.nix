@@ -18,5 +18,9 @@ _: {
     pam.services.swaylock = {
       text = ''auth include login '';
     };
+    sudo = {
+      enable = true;
+      wheelNeedsPassword = false;
+    };
   };
 }
