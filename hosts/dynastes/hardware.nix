@@ -74,4 +74,5 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.nvidia-container-toolkit.enable = true; # Allow docker containers to access gpu using `--device nvidia.com/gpu=all`
 }
