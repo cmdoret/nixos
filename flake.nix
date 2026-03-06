@@ -10,11 +10,15 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix/release-25.11";
+    antigravity-nix = {
+      url = "github:jacopone/antigravity-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
-    host = "bombyx";
+    host = "apis";
     profile = "intel";
     username = "cmdoret";
   in {
