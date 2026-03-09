@@ -37,7 +37,7 @@
   lockScreenImage = "pine.jpg";
   rofiImage = "pine.jpg";
   # Set Stylix Image
-  stylixImage = ../../wallpapers/depth-of-field-blurred-plants.jpg;
+  stylixImage = ../../wallpapers/areuse.jpg;
 
   # Syntax highlighting theme in neovim
   vimTheme = "gruvbox";
