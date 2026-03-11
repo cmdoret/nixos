@@ -1,5 +1,6 @@
 {inputs, ...}: {
   imports = [
+    ./antigravity.nix
     ./boot.nix
     ./flatpak.nix
     ./fonts.nix

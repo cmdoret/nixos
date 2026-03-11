@@ -1,6 +1,5 @@
 {pkgs, inputs, ...}: {
   environment.systemPackages = with pkgs; [
-    inputs.antigravity-nix.packages.x86_64-linux.default
     feishin
     freecad # computer assisted design
     kubectl
