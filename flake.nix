@@ -10,8 +10,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix/release-25.11";
-    antigravity-nix = {
-      url = "github:jacopone/antigravity-nix";
+    antigravity-jail= {
+      url = "github:cmdoret/antigravity-jail";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
