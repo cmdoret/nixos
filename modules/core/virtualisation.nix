@@ -2,7 +2,10 @@
   # Only enable either docker or podman -- Not both
   virtualisation = {
     libvirtd.enable = false;
-    docker.enable = true;
+    docker = {
+      enable = true;
+      daemon.settings.live-restore = false;
+    };
     podman.enable = false;
   };
   programs = {
