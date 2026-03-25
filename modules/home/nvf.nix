@@ -277,27 +277,32 @@ in {
         enableFormat = true;
         enableTreesitter = true;
         enableExtraDiagnostics = true;
-        nix.enable = true;
         clang.enable = true;
-        zig.enable = true;
-        python.enable = true;
+        css = {
+          enable = false;
+          format.type = ["prettierd"];
+        };
+        go = {
+          enable = true;
+          lsp.enable = true;
+          extraDiagnostics.enable = false;
+        };
+        html.enable = true;
+        lua.enable = true;
         markdown.enable = true;
+        nix.enable = true;
+        python.enable = true;
+        rust = {
+          enable = true;
+        };
         ts = {
           enable = true;
           lsp.enable = true;
           format.type = ["prettierd"];
           extensions.ts-error-translator.enable = true;
         };
-        html.enable = true;
-        lua.enable = true;
-        css = {
-          enable = false;
-          format.type = ["prettierd"];
-        };
         typst.enable = true;
-        rust = {
-          enable = true;
-        };
+        zig.enable = true;
       };
       visuals = {
         nvim-web-devicons.enable = true;
