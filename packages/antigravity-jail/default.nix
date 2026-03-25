@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, antigravity-nix, jail-nix, ... }:
 
 let
   pname = "antigravity-jail";
@@ -6,19 +6,10 @@ let
 
   system = pkgs.stdenv.hostPlatform.system;
 
-  # Fetch sources
-  antigravitySrc = import (builtins.fetchTarball {
-    url = "https://github.com/jacopone/antigravity-nix/archive/refs/heads/main.tar.gz";
-  }) { inherit pkgs; };
-
-  jailNix = import (builtins.fetchTarball {
-    url = "https://github.com/MohrJonas/jail.nix/archive/refs/heads/main.tar.gz";
-  }) { inherit pkgs; };
-
-  jail = jailNix.lib.init pkgs;
+  jail = jail-nix.lib.init pkgs;
   cs = jail.combinators;
 
-  antigravity = antigravitySrc.packages.${system}.google-antigravity-no-fhs;
+  antigravity = antigravity-nix.packages.${system}.google-antigravity-no-fhs;
 
   # Toolset for PATH
   agentEnv = pkgs.buildEnv {
@@ -46,6 +37,8 @@ in pkgs.stdenv.mkDerivation {
   inherit pname version;
 
   name = "${pname}-${version}";
+
+  dontUnpack = true;
 
   # We don’t need buildInputs if jail/writeShellScriptBin already adds necessary tools
   installPhase = ''

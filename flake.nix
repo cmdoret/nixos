@@ -6,14 +6,15 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    antigravity-nix = {
+      url = "github:jacopone/antigravity-nix/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    jail-nix.url = "github:MohrJonas/jail.nix";
     nh.url = "github:viperML/nh";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix/release-25.11";
-    antigravity-jail= {
-      url = "github:cmdoret/antigravity-jail";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
@@ -21,7 +22,24 @@
     host = "apis";
     profile = "intel";
     username = "cmdoret";
+
+    systems = [ "x86_64-linux" "aarch64-darwin" ];
+  
+    myPackages = nixpkgs.lib.genAttrs systems (system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      in
+        import ./packages { inherit pkgs; }
+    );
+
   in {
+
+    # Exposing my packages for multiple systems
+    packages = myPackages;
+
     nixosConfigurations = {
       amd = nixpkgs.lib.nixosSystem {
         inherit system;
