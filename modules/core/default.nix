@@ -1,6 +1,5 @@
-{inputs, ...}: {
+{pkgs, inputs, ...}: {
   imports = [
-    ./antigravity.nix
     ./boot.nix
     ./flatpak.nix
     ./fonts.nix
@@ -27,5 +26,12 @@
     ./virtualisation.nix
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
+  ];
+
+  environment.systemPackages = [
+    (pkgs.callPackage ../../packages/antigravity-jail {
+      inherit (inputs) antigravity-nix jail-nix;
+    })
+    (pkgs.callPackage ../../packages/stremio-enhanced { })
   ];
 }
