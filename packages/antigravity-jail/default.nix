@@ -73,14 +73,6 @@ in pkgs.symlinkJoin {
   name = "${pname}-${version}";
   paths = [ antigravityJailed ];
 
-
-  dontUnpack = true;
-
-  # We don’t need buildInputs if jail/writeShellScriptBin already adds necessary tools
-  installPhase = ''
-    mkdir -p $out/bin
-    ln -s ${antigravityWrapped}/bin/antigravity-wrapped $out/bin/antigravity
-  '';
   postBuild = ''
     # Rename the binary if the jail produces a differently named one
     ln -sf ${antigravityJailed}/bin/antigravity $out/bin/antigravity
