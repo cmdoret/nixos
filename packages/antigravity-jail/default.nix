@@ -33,21 +33,8 @@ let
     ${antigravity}/bin/antigravity --verbose --no-sandbox "$@"
   '';
 
-in pkgs.stdenv.mkDerivation {
-  inherit pname version;
-
-  name = "${pname}-${version}";
-
-  dontUnpack = true;
-
-  # We don’t need buildInputs if jail/writeShellScriptBin already adds necessary tools
-  installPhase = ''
-    mkdir -p $out/bin
-    ln -s ${antigravityWrapped}/bin/antigravity-wrapped $out/bin/antigravity
-  '';
-
   # Use a separate derivation for the sandbox, outside of shell quoting
-  antigravityJail = jail "antigravity" "${antigravityWrapped}/bin/antigravity-wrapped" [
+  antigravityJailed = jail "antigravity" "${antigravityWrapped}/bin/antigravity-wrapped" [
     cs.gui
     cs.xwayland
     cs.gpu
@@ -81,6 +68,24 @@ in pkgs.stdenv.mkDerivation {
     (cs.set-env "XDG_CONFIG_HOME" (cs.noescape "~/.config"))
     (cs.set-env "NIXOS_OZONE_WL" "1")
   ];
+
+in pkgs.symlinkJoin {
+  name = "${pname}-${version}";
+  paths = [ antigravityJailed ];
+
+
+  dontUnpack = true;
+
+  # We don’t need buildInputs if jail/writeShellScriptBin already adds necessary tools
+  installPhase = ''
+    mkdir -p $out/bin
+    ln -s ${antigravityWrapped}/bin/antigravity-wrapped $out/bin/antigravity
+  '';
+  postBuild = ''
+    # Rename the binary if the jail produces a differently named one
+    ln -sf ${antigravityJailed}/bin/antigravity $out/bin/antigravity
+  '';
+
 
   meta = with lib; {
     description = "Sandboxed Antigravity editor with proper PATH";
