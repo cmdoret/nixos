@@ -56,6 +56,8 @@ let
     (cs.rw-bind (cs.noescape "~/.config/Antigravity") (cs.noescape "~/.config/Antigravity"))
     (cs.rw-bind (cs.noescape "~/.antigravity") (cs.noescape "~/.antigravity"))
     (cs.rw-bind (cs.noescape "~/.gemini") (cs.noescape "~/.gemini"))
+    (cs.rw-bind "/data/nix/main" "/nix")
+    (cs.rw-bind "/data/nix/local" (cs.noescape "~/.local/share/nix"))
     (cs.add-runtime ''
       for arg in "$@"; do
         if [ -e "$arg" ]; then
