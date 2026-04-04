@@ -38,10 +38,10 @@ in {
 
       assistant = {
         copilot = {
-          enable = true;
-          cmp.enable = true;
+          enable = false;
+          cmp.enable = false;
         };
-        codecompanion-nvim.enable = false;
+        codecompanion-nvim.enable = true;
       };
       maps = {
         normal = {
