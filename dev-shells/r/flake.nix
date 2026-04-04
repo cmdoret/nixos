@@ -1,8 +1,12 @@
 {
   description = "R environment using devenv.";
 
+  nixConfig = {
+    extra-substituters = "https://devenv.cachix.org";
+    extra-trusted-public-keys = "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw=";
+  };
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:cachix/devenv-nixpkgs/rolling";
     flake-utils.url = "github:numtide/flake-utils";
     devenv.url = "github:cachix/devenv";
   };
