@@ -235,12 +235,6 @@ in {
           desc = "Toggle diagnostics list";
         }
         {
-          key = "<leader>tc";
-          mode = ["n"];
-          action = "<cmd>Copilot toggle<CR>";
-          desc = "Toggle Copilot";
-        }
-        {
           key = "<leader>sw";
           mode = ["n"];
           action = "<cmd>lua require('spectre').open_visual({select_word=true})<CR>";
