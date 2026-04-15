@@ -13,7 +13,8 @@
     jail-nix.url = "github:MohrJonas/jail.nix";
     nh.url = "github:viperML/nh";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
-    nvf.url = "github:notashelf/nvf";
+    #nvf.url = "github:notashelf/nvf";
+    nvf.url = "github:NotAShelf/nvf?ref=refs/tags/v0.8";
     stylix.url = "github:danth/stylix/release-25.11";
   };
 

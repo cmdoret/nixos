@@ -279,7 +279,6 @@ in {
         go = {
           enable = true;
           lsp.enable = true;
-          extraDiagnostics.enable = false;
         };
         html.enable = true;
         lua.enable = true;
