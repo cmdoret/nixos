@@ -7,7 +7,9 @@
   # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";
   # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
   extraMonitorSettings = "monitor = HDMI-A-1,2560x1440@120,auto,1";
-
+  
+  battery = false;
+  
   # Waybar Settings
   clock24h = true;
 

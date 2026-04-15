@@ -8,6 +8,8 @@
   # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
   extraMonitorSettings = "";
 
+  battery = false;
+
   # Waybar Settings
   clock24h = false;
 

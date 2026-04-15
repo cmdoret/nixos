@@ -8,6 +8,8 @@
     monitor=Virtual-1,1920x1080@60,auto,1
     ";
 
+  battery = false;
+
   # Waybar Settings
   clock24h = false;
 

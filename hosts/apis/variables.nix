@@ -10,6 +10,8 @@
     monitor = eDP-1,3840x2400@60,0x0,2
     monitor = DP-5,preferred,3840x2400,1
   '';
+  
+  battery = true;
 
   # Waybar Settings
   clock24h = true;
@@ -37,7 +39,7 @@
   lockScreenImage = "pine.jpg";
   rofiImage = "pine.jpg";
   # Set Stylix Image
-  stylixImage = ../../wallpapers/areuse.jpg;
+  stylixImage = ../../wallpapers/forest-fog.jpg;
 
   # Syntax highlighting theme in neovim
   vimTheme = "gruvbox";

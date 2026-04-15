@@ -12,6 +12,7 @@
     ./nix-ld.nix
     ./nix.nix
     ./packages.nix
+    ./power.nix
     ./printing.nix
     ./restic.nix
     ./security.nix

@@ -19,8 +19,8 @@ in {
     ./hyprland
     ./kitty.nix
     ./k9s.nix
+    ./noctalia
     ./nvf.nix
-    ./poweralertd.nix
     ./python.nix
     ./rofi
     ./qt.nix
@@ -30,7 +30,7 @@ in {
     ./swappy.nix
     ./swaync.nix
     ./virtmanager.nix
-    waybarChoice
+    #waybarChoice
     ./wezterm.nix
     ./wlogout
     ./xdg.nix
