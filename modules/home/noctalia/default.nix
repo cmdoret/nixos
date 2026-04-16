@@ -61,19 +61,36 @@
             {
               id = "plugin:tailscale";
             }
+            {
+              id = "MediaMini";
+              useFixedWidth =  true;
+              hideWhenIdle = true;
+              showVisualizer =  true;
+              visualizerType = "wave";
+            }
           ];
           center = [
             {
               id = "Workspace";
               hideUnoccupied = false;
               labelMode = "none";
+              showApplications = true;
+              showApplicationsHover = true;
+              colorizeIcons = true;
             }
           ];
           right = [
             {
+              id = "Microphone";
+              displayMode = "alwaysShow";
+            }
+            {
+              id = "Volume";
+              displayMode = "alwaysShow";
+            }
+            {
               id = "SystemMonitor";
-              compactMode = false;
-              usePadding = true;
+              compactMode = true;
               showNetworkStats = true;
               showDiskUsage = true;
               showDiskAvailable = true;
