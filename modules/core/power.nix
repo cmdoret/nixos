@@ -16,4 +16,5 @@ in {
   services.upower = {
     enable = battery;
   };
+  services.power-profiles-daemon.enable = true;
 }
