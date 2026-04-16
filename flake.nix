@@ -29,9 +29,9 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
-    host = "apis";
+    host = "elimus";
     profile = "intel";
-    username = "cmdoret";
+    username = "root";
 
     systems = [ "x86_64-linux" "aarch64-darwin" ];
   
