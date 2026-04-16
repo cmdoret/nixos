@@ -41,6 +41,7 @@
       # configure noctalia here
       bar = {
         density = "default";
+        barType = "simple";
         position = "top";
         showCapsule = false;
         widgets = {
@@ -166,8 +167,12 @@
         avatarImage = "~/.face.icon";
         radiusRatio = 1;
         lockScreenAnimations = true;
-        lockScreenBlur = 0.25;
-        lockScreenTint = 0.25;
+        lockScreenBlur = 0.50;
+        lockScreenTint = 0.33;
+        showHibernateOnLockScreen = true;
+        enableLockScreenMediaControls = true;
+        autoStartAuth = true;
+        allowPasswordWithFprintd = true;
       };
       location = {
         monthBeforeDay = false;
