@@ -100,6 +100,8 @@
               id = "Battery";
               alwaysShowPercentage = false;
               warningThreshold = 30;
+              showNoctaliaPerformance = true;
+              showPowerProfiles =true;
             }
             {
               id = "Clock";
@@ -112,7 +114,11 @@
               id = "Tray";
             }
             {
+              id = "Notifications";
+            }
+            {
               id = "plugin:usb-drive-manager";
+              editHideWhenEmpty = true;
             }
           ];
         };
