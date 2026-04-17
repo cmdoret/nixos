@@ -191,6 +191,9 @@ in
       location = {
         monthBeforeDay = false;
       };
+      colorSchemes = {
+        useWallpaperColors = true;
+      };
     };
     # this may also be a string or a path to a JSON file.
   };
