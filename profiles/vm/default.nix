@@ -1,11 +1,6 @@
-{host, ...}: {
-  imports = [
-    ../../hosts/${host}
-    ../../modules/drivers
-    ../../modules/core
-    ../../roles
-  ];
-  # Enable GPU Drivers
+{...}: {
+  imports = [../base.nix];
+
   drivers.amdgpu.enable = false;
   drivers.nvidia.enable = false;
   drivers.nvidia-prime.enable = false;

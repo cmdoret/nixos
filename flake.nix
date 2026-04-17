@@ -50,57 +50,19 @@
     # Exposing my packages for multiple systems
     packages = myPackages;
 
-    nixosConfigurations = {
-      amd = nixpkgs.lib.nixosSystem {
+    # Generates a nixosConfiguration for each hardware profile
+    nixosConfigurations = nixpkgs.lib.mapAttrs (name: _:
+      nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/amd];
-      };
-      nvidia = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/nvidia];
-      };
-      nvidia-laptop = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/nvidia-laptop];
-      };
-      intel = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/intel];
-      };
-      vm = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/vm];
-      };
+        specialArgs = { inherit inputs username host profile; };
+        modules = [./profiles/${name}];
+      }
+    ) {
+      amd = {};
+      nvidia = {};
+      nvidia-laptop = {};
+      intel = {};
+      vm = {};
     };
   };
 }
