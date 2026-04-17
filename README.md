@@ -1,7 +1,10 @@
 # nixos
 
+
 This repository contains the definition of my machines as code (i.e. declarative
 setup) using NixOS. It is structured as follows:
+
+## Structure
 
 - `dev-shells`: ready-to-use development shell for various languages.
 - `hosts`: the different machines and their specific configuration values.
@@ -37,6 +40,23 @@ The flake outputs are as follows, exposing one configuration per host in `./host
 ```
 
 How it works:
+
+```mermaid
+flowchart TD
+    B[flake.nix] -->|$HOSTNAME| C["hosts/${host}/flake-vars.nix"]
+    C -->|"${profile}"| E["profiles/${profile}/default.nix"]
+    E --> F["profiles/base.nix"]
+    E --> drivers(("load drivers"))
+
+    F --> G["modules/drivers/default.nix"]
+    F --> H["modules/core/default.nix"]
+    F --> I["hosts/${host}/default.nix"]
+    I --> roles(("toggle roles"))
+    I --> J["roles/default.nix"]
+    I --> K["./hosts/${host}/hardware.nix"]
+    I --> L["./hosts/${host}/host-packages.nix"]
+```
+
 * Build with `nh os switch` or `nixos-rebuild switch --flake ".#${HOSTNAME}"`
   + `nh` automatically picks the profile named like `$HOSTNAME` by default
 * `flake.nix` reads host configurations from `./hosts/*/flake-vars.nix`
