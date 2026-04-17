@@ -4,6 +4,12 @@
 This repository contains the definition of my machines as code (i.e. declarative
 setup) using NixOS. It is structured as follows:
 
+<details>
+<summary>GIF preview</summary>
+
+![](./assets/rice-preview.gif)
+</details>
+
 ## Structure
 
 - `dev-shells`: ready-to-use development shell for various languages.
