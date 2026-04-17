@@ -164,7 +164,6 @@ in
         warningColor = "#B89D61";
         criticalColor = "#B8765A";
       };
-      colorSchemes.predefinedScheme = "Monochrome";
       appLauncher = {
         iconMode = "native";
       };
@@ -193,6 +192,8 @@ in
       };
       colorSchemes = {
         useWallpaperColors = true;
+        darkMode = true;
+        generationMethod = "tonal-spot";
       };
     };
     # this may also be a string or a path to a JSON file.
