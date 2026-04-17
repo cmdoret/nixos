@@ -2,6 +2,6 @@
   imports = [
     ./hardware.nix
     ./host-packages.nix
-    ../../modules/core/steam.nix
   ];
+  roles = [ "development" "laptop" "music" "office" ];
 }

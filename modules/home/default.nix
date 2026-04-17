@@ -28,7 +28,7 @@ in {
     ./starship.nix
     ./stylix.nix
     ./swappy.nix
-    ./swaync.nix
+    #./swaync.nix
     ./virtmanager.nix
     #waybarChoice
     ./wezterm.nix

@@ -15,12 +15,6 @@ let
 in
   {
   environment.systemPackages = with pkgs; [
-    audacity
-    feishin
     freecadWrapped # computer assisted design
-    lutris
-    obs-studio
-    osu-lazer-bin
-    vesktop
   ];
 }

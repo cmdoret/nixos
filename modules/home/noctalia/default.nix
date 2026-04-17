@@ -65,6 +65,7 @@ in
             }
             {
               id = "VPN";
+              displayMode = "alwaysShow";
             }
             {
               id = "plugin:tailscale";
@@ -102,7 +103,7 @@ in
               compactMode = true;
               showNetworkStats = true;
               showDiskUsage = true;
-              showDiskAvailable = true;
+              showDiskAvailable = false;
             }
             {
               id = "Battery";

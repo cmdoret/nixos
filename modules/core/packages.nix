@@ -37,12 +37,12 @@
     fd # find, but better
     ffmpeg # Terminal Video / Audio Editing
     file-roller # Archive Manager
+    freecad # computer assisted design
     fzf # fuzzy finder
     gdu # graphical disk usage
     gedit # Simple Graphical Text Editor
     gimp # Great Photo Editor
     git-lfs # large file support for git
-    mesa-demos # Needed for inxi -G GPU info
     gping #graphical ping
     tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
     htop # Simple Terminal Based System Monitor
@@ -63,6 +63,7 @@
     lolcat # Add Colors To Your Terminal Command Output
     loupe # gtk based image viewer
     lshw # Detailed Hardware Information
+    mesa-demos # Needed for inxi -G GPU info
     mpv # Incredible Video Player
     mullvad-vpn # VPN client
     mullvad-browser # privacy-hardened browser
@@ -70,25 +71,23 @@
     nextcloud-client # Personal cloud-storage
     nixfmt-rfc-style # Nix Formatter
     nix-index # For Searching Nix Packages
+    obs-studio # Video capture
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
-    picard # For Changing Music Metadata & Getting Cover Art
     pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
     playerctl # Allows Changing Media Volume Through Scripts
     p7zip # compression utility
-    rhythmbox
     ripgrep # Improved Grep
     signal-desktop # messaging
     socat # Needed For Screenshots
     sox # audio support for FFMPEG
-    supersonic # audio client for subsonic servers
     tealdeer # tldr command reference
     thunderbird # mail client
     trayscale # tailscale gui for vpn
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
     usbutils # Good Tools For USB Devices
-    uv # python tooling
+    vesktop # OSS discord client
     v4l-utils # Used For Things Like OBS Virtual Camera
     warp # file transfer
     waypaper # backup wallpaper GUI
@@ -96,7 +95,6 @@
     wireguard-tools # VPN
     ytmdl # Tool For Downloading Audio From YouTube
     zathura # PDF Viewer
-    zed-editor # IDE
     zip # compression utility
   ];
 }

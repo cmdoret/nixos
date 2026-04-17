@@ -12,13 +12,10 @@
     ./nix-ld.nix
     ./nix.nix
     ./packages.nix
-    ./power.nix
-    ./printing.nix
     ./restic.nix
     ./security.nix
     ./services.nix
     ./starfish.nix
-    #./steam.nix
     ./stylix.nix
     ./syncthing.nix
     ./system.nix
@@ -29,10 +26,4 @@
     inputs.stylix.nixosModules.stylix
   ];
 
-  environment.systemPackages = [
-    (pkgs.callPackage ../../packages/antigravity-jail {
-      inherit (inputs) antigravity-nix jail-nix;
-    })
-    (pkgs.callPackage ../../packages/stremio-enhanced { })
-  ];
 }

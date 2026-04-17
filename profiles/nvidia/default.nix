@@ -3,6 +3,7 @@
     ../../hosts/${host}
     ../../modules/drivers
     ../../modules/core
+    ../../roles
   ];
   # Enable GPU Drivers
   drivers.amdgpu.enable = false;

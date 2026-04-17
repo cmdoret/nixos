@@ -11,8 +11,6 @@
     monitor = DP-5,preferred,3840x2400,1
   '';
   
-  battery = true;
-
   # Waybar Settings
   clock24h = true;
 
