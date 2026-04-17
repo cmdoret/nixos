@@ -4,7 +4,7 @@
     ./steam.nix
   ];
 
-  config = lib.mkIf config.gaming {
+  config = lib.mkIf config.gaming.enable {
     environment.systemPackages = with pkgs; [
       lutris
       osu-lazer-bin

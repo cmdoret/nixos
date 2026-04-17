@@ -1,5 +1,5 @@
 { pkgs, lib, config, ... }: {
-  config = lib.mkIf config.laptop {
+  config = lib.mkIf config.laptop.enable {
     services.fprintd = {
       enable = true;
       package = pkgs.fprintd-tod;

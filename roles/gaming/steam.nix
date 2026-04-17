@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }:
 {
-  config = lib.mkIf config.gaming {
+  config = lib.mkIf config.gaming.enable {
     programs = {
       steam = {
         enable = true;

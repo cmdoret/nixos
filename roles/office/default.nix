@@ -4,7 +4,7 @@
     ./printing.nix
   ];
 
-  config = lib.mkIf config.office {
+  config = lib.mkIf config.office.enable {
     environment.systemPackages = with pkgs; [
       libreoffice
       slack

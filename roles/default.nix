@@ -1,7 +1,6 @@
 { lib, config, ... }:
-
 let
-  roles = [
+  availableRoles = [
     "development"
     "gaming"
     "laptop"
@@ -9,19 +8,29 @@ let
     "office"
     "torrent"
   ];
-
-  roleOptions = lib.listToAttrs (map (r: lib.nameValuePair r r) roles);
 in
 {
-  options = lib.recursiveUpdate {
+  # Dynamically generate options `<role>.enable = false`
+  options = lib.genAttrs availableRoles (role: {
+    enable = lib.mkEnableOption "${role} role";
+  }) // {
+  # This allows users to simplify specify roles through a list of enums.
     roles = lib.mkOption {
-      type = lib.types.listOf (lib.types.enum roles);
-      default = [ ];
+      type = lib.types.listOf (lib.types.enum availableRoles);
+      default = [];
       description = "List of enabled roles";
     };
-  } (lib.mapAttrs (role: _: lib.mkEnableOption "${role} role") roleOptions);
+  };
 
-  config = lib.mapAttrs (role: _: lib.mkIf (lib.elem role config.roles) true) roleOptions;
+  # Sets <role>.enable = true for roles specified in the list
+  config = lib.mkMerge (
+    map (
+      role:
+      lib.mkIf (lib.elem role config.roles) {
+        ${role}.enable = true;
+      }
+    ) availableRoles
+  );
 
-  imports = map (role: ./${role}) roles;
+  imports = map (role: ./${role}) availableRoles;
 }

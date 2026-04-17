@@ -1,6 +1,6 @@
 { pkgs, host, lib, config, ... }:
 {
-  config = lib.mkIf config.laptop {
+  config = lib.mkIf config.laptop.enable {
     environment.systemPackages = with pkgs; [
       upower
     ];

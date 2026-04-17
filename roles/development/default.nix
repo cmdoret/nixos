@@ -1,6 +1,6 @@
 { pkgs, inputs, lib, config, ... }:
 {
-  config = lib.mkIf config.development {
+  config = lib.mkIf config.development.enable {
     environment.systemPackages = with pkgs; [
       kubectl
       nodejs

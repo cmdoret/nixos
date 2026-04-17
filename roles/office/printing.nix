@@ -1,7 +1,7 @@
 { pkgs, host, lib, config, ... }: let
   inherit (import ../../hosts/${host}/variables.nix) printEnable;
 in {
-  config = lib.mkIf config.office {
+  config = lib.mkIf config.office.enable {
     services = {
       printing = {
         enable = printEnable;
