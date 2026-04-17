@@ -22,47 +22,53 @@
     jail-nix.url = "github:MohrJonas/jail.nix";
     nh.url = "github:viperML/nh";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
-    #nvf.url = "github:notashelf/nvf";
     nvf.url = "github:NotAShelf/nvf?ref=refs/tags/v0.8";
     stylix.url = "github:danth/stylix/release-25.11";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
-    system = "x86_64-linux";
-    host = "elimus";
-    profile = "intel";
-    username = "cmdoret";
+    lib = nixpkgs.lib;
+
+    hosts = lib.filterAttrs (name: type: type == "directory") (builtins.readDir ./hosts);
+
+    hostConfigs = lib.mapAttrs (hostName: _: let
+      vars = import ./hosts/${hostName}/flake-vars.nix;
+    in {
+      inherit (vars) system profile username;
+      inherit hostName;
+    }) hosts;
 
     systems = [ "x86_64-linux" "aarch64-darwin" ];
-  
-    myPackages = nixpkgs.lib.genAttrs systems (system:
+
+    myPackages = lib.genAttrs systems (system:
       let
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
         };
       in
-        import ./packages { inherit pkgs; }
+        import ./packages {
+          inherit pkgs;
+          inherit inputs;
+        }
     );
 
   in {
 
-    # Exposing my packages for multiple systems
     packages = myPackages;
 
-    # Generates a nixosConfiguration for each hardware profile
-    nixosConfigurations = nixpkgs.lib.mapAttrs (name: _:
-      nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs username host profile; };
-        modules = [./profiles/${name}];
+    # Generates one nixos configuration per host in `./hosts`
+    nixosConfigurations = lib.mapAttrs (hostName: cfg:
+      lib.nixosSystem {
+        system = cfg.system;
+        specialArgs = {
+          inherit inputs;
+          host = cfg.hostName;
+          profile = cfg.profile;
+          username = cfg.username;
+        };
+        modules = [./profiles/${cfg.profile}];
       }
-    ) {
-      amd = {};
-      nvidia = {};
-      nvidia-laptop = {};
-      intel = {};
-      vm = {};
-    };
+    ) hostConfigs;
   };
 }
