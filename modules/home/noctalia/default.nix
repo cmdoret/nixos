@@ -1,5 +1,5 @@
 { pkgs, inputs, username, host, ... }: let
-  inherit (import ../../../hosts/${host}/variables.nix) lockScreenImage;
+  inherit (import ../../../hosts/${host}/variables.nix) lockScreenImage terminal;
 in
 {
   imports = [
@@ -70,6 +70,8 @@ in
             {
               id = "plugin:tailscale";
               compactMode = true;
+              hideDisconnected = true;
+              terminalCommand = terminal;
             }
             {
               id = "MediaMini";
