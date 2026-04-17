@@ -1,14 +1,14 @@
 {
   # Git Configuration ( For Pulling Software Repos )
-  gitUsername = "Tyler Kelley";
-  gitEmail = "tylerzanekelley@gmail.com";
+  gitUsername = "cmdoret";
+  gitEmail = "cyril.mattheydoret@gmail.com";
 
   # Hyprland Settings
   # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";
   # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
   extraMonitorSettings = "";
 
-  battery = false;
+  battery = true;
 
   # Waybar Settings
   clock24h = false;
@@ -31,12 +31,12 @@
 
   # Set hyprland images
   # among files in ./modules/home/hyprland/avatar, filename only, must be .jpg
-  avatarImage = "sootball.jpg";
+  avatarImage = "sdsc.jpg";
   # among files in ./wallpapers, filename only
-  lockScreenImage = "beautifulmountainscape.jpg";
-  rofiImage = "Rainnight.jpg";
+  lockScreenImage = "forest-fog.jpg";
+  rofiImage = "pine.jpg";
   # Set Stylix Image
-  stylixImage = ../../wallpapers/beautifulmountainscape.jpg;
+  stylixImage = ../../wallpapers/pine.jpg;
 
   # Syntax highlighting theme in neovim
   # See: https://github.com/NotAShelf/nvf/blob/main/modules/plugins/theme/supported-themes.nix
@@ -58,8 +58,8 @@
   # animations-end4.nix (end-4 project)
   # animations-dynamic.nix (ml4w project)
   # animations-moving.nix (ml4w project)
-  animChoice = ../../modules/home/hyprland/animations-def.nix;
+  animChoice = ../../modules/home/hyprland/animations-end4.nix;
 
   # Enable Thunar GUI File Manager
-  thunarEnable = false;
+  thunarEnable = true;
 }

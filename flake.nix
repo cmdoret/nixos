@@ -31,7 +31,7 @@
     system = "x86_64-linux";
     host = "elimus";
     profile = "intel";
-    username = "root";
+    username = "cmdoret";
 
     systems = [ "x86_64-linux" "aarch64-darwin" ];
   
