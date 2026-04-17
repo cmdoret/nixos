@@ -14,7 +14,7 @@ in
   options = lib.genAttrs availableRoles (role: {
     enable = lib.mkEnableOption "${role} role";
   }) // {
-  # This allows users to simplify specify roles through a list of enums.
+  # This allows users to specify roles through a list of enums.
     roles = lib.mkOption {
       type = lib.types.listOf (lib.types.enum availableRoles);
       default = [];
