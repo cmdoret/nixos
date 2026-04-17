@@ -1,9 +1,16 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, username, host, ... }: let
+  inherit (import ../../../hosts/${host}/variables.nix) lockScreenImage;
+in
 {
   imports = [
     inputs.noctalia.homeModules.default
   ];
 
+  home.file.".cache/noctalia/wallpapers.json" = {
+    text = builtins.toJSON {
+      defaultWallpaper = "/home/${username}/Pictures/wallpapers/${lockScreenImage}";
+    };
+  };
   # configure options
   programs.noctalia-shell = {
     enable = true;
