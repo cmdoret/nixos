@@ -122,14 +122,14 @@ in
               usePrimaryColor = true;
             }
             {
+              id = "NotificationHistory";
+            }
+            {
               id = "Tray";
             }
             {
-              id = "Notifications";
-            }
-            {
               id = "plugin:usb-drive-manager";
-              editHideWhenEmpty = true;
+              hideWhenEmpty = true;
             }
           ];
         };
