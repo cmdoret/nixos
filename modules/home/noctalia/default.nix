@@ -61,6 +61,7 @@
             }
             {
               id = "plugin:tailscale";
+              compactMode = true;
             }
             {
               id = "MediaMini";
