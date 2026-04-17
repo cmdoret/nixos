@@ -8,7 +8,7 @@ in
 
   home.file.".cache/noctalia/wallpapers.json" = {
     text = builtins.toJSON {
-      defaultWallpaper = "/home/${username}/Pictures/wallpapers/${lockScreenImage}";
+      defaultWallpaper = "/home/${username}/Pictures/Wallpapers/${lockScreenImage}";
     };
   };
   # configure options
