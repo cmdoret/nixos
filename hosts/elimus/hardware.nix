@@ -52,7 +52,19 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  swapDevices = [ ];
+
+
+  # Swapfile + btrfs setup
+  # see: https://sawyershepherd.org/post/hibernating-to-an-encrypted-swapfile-on-btrfs-with-nixos/
+  boot.kernelParams = [ "resume_offset=8716050" ];
+  boot.resumeDevice = "/dev/disk/by-label/NIXROOT";
+  # 38GB swap file (hibernation recommendation is RAM+sqrt(RAM))
+  fileSystems."/swap" = {
+    device = "/dev/disk/by-label/NIXROOT";
+    fsType = "btrfs";
+    options = [ "subvol=/root/swap" "compress=zstd" "noatime" ];
+  };
+  swapDevices = [ { device = "/swap/swapfile"; } ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
