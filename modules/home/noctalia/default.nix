@@ -211,7 +211,46 @@ in
         darkMode = true;
         generationMethod = "tonal-spot";
       };
-      sessionMenu.largeButtonsStyle = false;
+      sessionMenu = {
+        largeButtonsStyle = false;
+        powerOptions = [
+          {
+            action = "lock";
+            enabled = true;
+            keybind = "L";
+          }
+          {
+            action = "suspend";
+            enabled = true;
+            keybind = "U";
+          }
+          {
+            action = "hibernate";
+            enabled = true;
+            keybind = "H";
+          }
+          {
+            action = "reboot";
+            enabled = true;
+            keybind = "R";
+          }
+          {
+            action = "logout";
+            enabled = true;
+            keybind = "O";
+          }
+          {
+            action = "shutdown";
+            enabled = true;
+            keybind = "S";
+          }
+          {
+            action = "rebootToUefi";
+            enabled = false;
+            keybind = "7";
+          }
+        ];
+      };
     };
     # this may also be a string or a path to a JSON file.
   };
