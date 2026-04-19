@@ -25,7 +25,7 @@
   enableNFS = true;
 
   # Enable Printing Support
-  printEnable = false;
+  printEnable = true;
 
   # Set hyprland images
   # among files in ./modules/home/hyprland/avatar, filename only, must be .jpg
@@ -41,14 +41,6 @@
   vimTheme = "onedark";
   #  See: https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
   vimLineTheme = "onedark";
-
-  # Set Waybar
-  #  Available Options:
-  #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-ddubs-2.nix;
-  #waybarChoice = ../../modules/home/waybar/Jerry-waybar.nix;
-  waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
 
   # Set Animation style
   # Available options are:
