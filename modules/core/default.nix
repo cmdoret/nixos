@@ -1,6 +1,7 @@
 {pkgs, inputs, ...}: {
   imports = [
     ./boot.nix
+    ./evolution.nix
     ./flatpak.nix
     ./fonts.nix
     ./greetd.nix

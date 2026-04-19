@@ -14,6 +14,9 @@ in
   # configure options
   programs.noctalia-shell = {
     enable = true;
+    package = (inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override { 
+      calendarSupport = true; 
+    });
     plugins = {
       sources = [
         {
@@ -37,6 +40,7 @@ in
         tailscale = {
           compactMode = true;
           hideDisconnected = true;
+          terminalCommand = terminal;
         };
         usb-drive-manager = {
           hideWhenEmpty = true;
