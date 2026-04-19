@@ -7,19 +7,11 @@
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      #      "$modifier,escape,exec,hyprlock --immediate"
-      "$modifier,escape,exec,noctalia-shell ipc call lockScreen lock"
       "$modifier,Return,exec,${terminal}"
-      "$modifier SHIFT,slash,exec,list-keybinds"
-      "$modifier,D,exec,rofi-launcher"
       "$modifier SHIFT,B,exec,web-search"
-      "$modifier ALT,W,exec,wallsetter"
-      "$modifier SHIFT,N,exec,swaync-client -rs"
       "$modifier,B,exec,${browser}"
       "$modifier,Y,exec,kitty -e yazi"
-      "$modifier,E,exec,emopicker9000"
       "$modifier,S,exec,screenshootin"
-      "$modifier SHIFT,S,exec,wlogout"
       "$modifier,C,exec,hyprpicker -a"
       "$modifier,T,exec,pypr toggle term"
       "$modifier,M,exec,pavucontrol"
@@ -30,7 +22,7 @@ in {
       "$modifier SHIFT,F,fullscreen,"
       "$modifier SHIFT,SPACE,togglefloating"
       "$modifier ALT,F,workspaceopt, allfloat"
-      "$modifier SHIFT,C,exit,"
+      "$modifier SHIFT,R,exec,hyprctl reload"
       "$modifier SHIFT,left,movewindow,l"
       "$modifier SHIFT,right,movewindow,r"
       "$modifier SHIFT,up,movewindow,u"
@@ -92,6 +84,15 @@ in {
       ",XF86AudioPrev, exec, playerctl previous"
       ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
       ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
+      # noctalia
+      "$modifier,escape,exec,noctalia-shell ipc call lockScreen lock"
+      "$modifier,D,exec,noctalia-shell ipc call launcher toggle"
+      "$modifier SHIFT,S,exec,noctalia-shell ipc call sessionMenu toggle"
+      "$modifier,E,exec,noctalia-shell ipc call launcher emoji"
+      # replaced by noctalia
+      #"$modifier,E,exec,emopicker9000"
+      #"$modifier SHIFT,S,exec,wlogout"
+      #"$modifier,escape,exec,hyprlock --immediate"
     ];
     bindl = [
       ",switch:on:Lid Switch, exec, hypr-lid-close"

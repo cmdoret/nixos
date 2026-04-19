@@ -8,7 +8,6 @@ in {
     ./bat.nix
     ./btop.nix
     ./cava.nix
-    ./emoji.nix
     ./fastfetch
     ./fzf.nix
     ./gh.nix
@@ -22,20 +21,21 @@ in {
     ./noctalia
     ./nvf.nix
     ./python.nix
-    ./rofi
     ./qt.nix
     ./scripts
     ./starship.nix
     ./stylix.nix
     ./swappy.nix
-    #./swaync.nix
     ./virtmanager.nix
-    #waybarChoice
     ./wezterm.nix
-    ./wlogout
     ./xdg.nix
     ./yazi
     ./zoxide.nix
     ./zsh
+    # replaced by noctalia
+    #./rofi
+    #./swaync.nix
+    #waybarChoice
+    #./wlogout
   ];
 }

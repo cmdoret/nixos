@@ -168,7 +168,10 @@ in
         criticalColor = "#B8765A";
       };
       appLauncher = {
-        iconMode = "native";
+        terminalCommand = terminal;
+        iconMode = "tabler";
+        overviewLayer = true;
+        density = "compact";
       };
       dock = {
         enabled = true;
@@ -190,6 +193,12 @@ in
         autoStartAuth = true;
         allowPasswordWithFprintd = true;
       };
+      idle = {
+        enabled = true;
+        screenOffTimeout = 300;
+        lockTimeout = 330;
+        suspendTimeout = 600;
+      };
       location = {
         monthBeforeDay = false;
       };
@@ -198,6 +207,7 @@ in
         darkMode = true;
         generationMethod = "tonal-spot";
       };
+      sessionMenu.largeButtonsStyle = false;
     };
     # this may also be a string or a path to a JSON file.
   };
