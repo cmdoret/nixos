@@ -1,4 +1,5 @@
 {
+  pkgs,
   host,
   username,
   ...
@@ -16,7 +17,7 @@
       };
 
       logo = {
-        source = ./nixos.png;
+        source = "${pkgs.nixos-icons}/share/icons/hicolor/256x256/apps/nix-snowflake.png";
         type = "kitty-direct";
         height = 10;
         width = 20;
