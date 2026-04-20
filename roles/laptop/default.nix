@@ -1,8 +1,9 @@
 { pkgs, inputs, lib, config, ... }:
 {
   imports = [
-    ./power.nix
     ./fprintd.nix
+    ./pam.nix
+    ./power.nix
   ];
 
   config = lib.mkIf config.laptop.enable {
