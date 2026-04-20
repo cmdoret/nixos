@@ -1,5 +1,6 @@
 _: {
   stylix.targets = {
+    anki.enable = true;
     fcitx5.enable = true;
     ghostty.enable = true;
     hyprland.enable = false;
