@@ -1,4 +1,4 @@
-# Dynamic PAM configuration to only prompt for fingerprint if laptop lid is closed.
+# Dynamic PAM configuration to only prompt for fingerprint if laptop lid is open.
 
 {
   pkgs,
