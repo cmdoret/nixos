@@ -33,12 +33,11 @@
   # among files in ./wallpapers, filename only
   lockScreenImage = "beautifulmountainscape.jpg";
   rofiImage = "Rainnight.jpg";
-  # Set Stylix Image
-  stylixImage = ../../wallpapers/beautifulmountainscape.jpg;
+  # See: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
+  theme = "dracula";
+  # Autogenerate theme based on this image if theme is null.
+  stylixImage = ../../wallpapers/nix-wallpaper-stripes-logo.png;
 
-  # Syntax highlighting theme in neovim
-  # See: https://github.com/NotAShelf/nvf/blob/main/modules/plugins/theme/supported-themes.nix
-  vimTheme = "onedark";
   #  See: https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
   vimLineTheme = "onedark";
 

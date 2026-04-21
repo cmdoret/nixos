@@ -33,29 +33,15 @@
   # among files in ./wallpapers, filename only
   lockScreenImage = "beautifulmountainscape.jpg";
   rofiImage = "voxels3d.png";
-  # Set Stylix Image
+  # See: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
+  theme = "onedark";
+  # Autogenerate theme based on this image if theme is null.
   stylixImage = ../../wallpapers/beautifulmountainscape.jpg;
 
-  # Syntax highlighting theme in neovim
-  # See: https://github.com/NotAShelf/nvf/blob/main/modules/plugins/theme/supported-themes.nix
-  vimTheme = "github";
   #  See: https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
   vimLineTheme = "horizon";
 
-  # Set Waybar
-  #  Available Options:
-  #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-ddubs-2.nix;
-  #waybarChoice = ../../modules/home/waybar/Jerry-waybar.nix;
-  waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
-
   # Set Animation style
-  # Available options are:
-  # animations-def.nix  (default)
-  # animations-end4.nix (end-4 project)
-  # animations-dynamic.nix (ml4w project)
-  # animations-moving.nix (ml4w project)
   animChoice = ../../modules/home/hyprland/animations-dynamic.nix;
 
   # Enable Thunar GUI File Manager
