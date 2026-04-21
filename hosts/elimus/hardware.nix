@@ -20,38 +20,52 @@
     };
   };
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-label/NIXROOT";
+  fileSystems ={
+    "/" = {
+      device = "/dev/disk/by-label/NIXROOT";
       fsType = "btrfs";
       options = [ "subvol=root" "compress=zstd" "noatime" ];
     };
 
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-label/NIXROOT";
+    "/home" = {
+      device = "/dev/disk/by-label/NIXROOT";
       fsType = "btrfs";
       options = [ "subvol=home" "compress=zstd" "noatime" ];
     };
 
-  fileSystems."/nix" =
-    { device = "/dev/disk/by-label/NIXROOT";
+    "/nix" = {
+      device = "/dev/disk/by-label/NIXROOT";
       fsType = "btrfs";
       options = [ "subvol=nix" "compress=zstd" "noatime" ];
     };
 
-  fileSystems."/var/log" =
-    { device = "/dev/disk/by-label/NIXROOT";
+    "/var/log" = {
+      device = "/dev/disk/by-label/NIXROOT";
       fsType = "btrfs";
       options = [ "subvol=log" "compress=zstd" "noatime" ];
       neededForBoot = true;
     };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-label/NIXBOOT";
-      fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
-    };
+    "/boot" = {
+        device = "/dev/disk/by-label/NIXBOOT";
+        fsType = "vfat";
+        options = [ "fmask=0022" "dmask=0022" ];
+      };
 
+    "/mnt/backup" = {
+      device = "192.168.1.151:/mnt/vault/backup/elimus";
+      fsType = "nfs";
+      options = [
+        "x-systemd.automount"
+        "noauto"
+        "x-systemd.idle-timeout=300"
+        "x-systemd.mount-timeout=5"
+        "noatime"
+        "soft"
+        "nfsvers=4.0"
+      ];
+    };
+  };
 
 
   # Swapfile + btrfs setup
