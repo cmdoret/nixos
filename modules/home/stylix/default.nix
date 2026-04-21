@@ -3,6 +3,7 @@
   stylix.targets = {
     anki.enable = true;
     fcitx5.enable = true;
+    firefox.enable = true;
     ghostty.enable = false;
     hyprland.enable = false;
     hyprlock.enable = false;
@@ -19,7 +20,7 @@
   programs.noctalia-shell.colors = with config.lib.stylix.colors.withHashtag; {
     mPrimary = base0D;
     mOnPrimary = base00;
-    mSecondary = base05;
+    mSecondary = base0E;
     mOnSecondary = base00;
     mTertiary = base0C;
     mOnTertiary = base00;
