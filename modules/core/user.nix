@@ -45,6 +45,7 @@ in {
       "wheel"
     ];
     shell = pkgs.zsh;
+    uid = 1000;
     ignoreShellProgramCheck = true;
   };
   nix.settings.allowed-users = [ "@wheel" ];
