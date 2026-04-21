@@ -72,6 +72,7 @@ in {
         "keepaspectratio, title:^(Picture-in-Picture)$"
         "noblur, tag:games*"
         "fullscreen, tag:games*"
+        "persistentsize, class:^(.*)$"
       ];
     };
   };
