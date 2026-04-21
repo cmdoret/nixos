@@ -1,4 +1,7 @@
 {terminal}:
+let
+  hyprLoad = "hyprctl reload";
+in 
 {
   appLauncher = {
     terminalCommand = terminal;
@@ -7,11 +10,6 @@
     density = "compact";
   };
   bar = import ./bar.nix {};
-  colorSchemes = {
-    useWallpaperColors = true;
-    darkMode = true;
-    generationMethod = "tonal-spot";
-  };
   controlCenter = import ./control-center.nix {};
   dock = {
     enabled = true;
@@ -32,6 +30,12 @@
     enableLockScreenMediaControls = true;
     autoStartAuth = true;
     allowPasswordWithFprintd = true;
+  };
+  hooks = {
+    enabled = true;
+    screenUnlock = hyprLoad;
+    startup = hyprLoad;
+    session = hyprLoad;
   };
   idle = {
     enabled = true;
