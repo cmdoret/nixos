@@ -24,7 +24,7 @@ in {
     ./qt.nix
     ./scripts
     ./starship.nix
-    ./stylix.nix
+    ./stylix
     ./swappy.nix
     ./virtmanager.nix
     ./wezterm.nix

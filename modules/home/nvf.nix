@@ -6,7 +6,7 @@
   config,
   ...
 }: let
-  inherit (import ../../hosts/${host}/variables.nix) vimTheme vimLineTheme;
+  inherit (import ../../hosts/${host}/variables.nix) vimLineTheme;
 in {
   imports = [inputs.nvf.homeManagerModules.default];
 
@@ -310,14 +310,8 @@ in {
 
       statusline.lualine = {
         enable = true;
-        theme = "${vimLineTheme}";
+        theme = lib.mkForce "${vimLineTheme}";
       };
-      theme = {
-        enable = true;
-        name = "${vimTheme}";
-        style = "dark";
-      };
-
       autopairs.nvim-autopairs.enable = true;
       autocomplete.nvim-cmp.enable = true;
       snippets.luasnip.enable = true;
