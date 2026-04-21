@@ -39,9 +39,9 @@
         showApplications = true;
         showApplicationsHover = true;
         colorizeIcons = true;
-        focusedColor = "secondary";
-        occupiedColor = "primary";
-        emptyColor = "primary";
+        focusedColor = "primary";
+        occupiedColor = "none";
+        emptyColor = "none";
       }
     ];
     right = [
