@@ -33,14 +33,16 @@
   # among files in ./wallpapers, filename only
   lockScreenImage = "beautifulmountainscape.jpg";
   rofiImage = "Rainnight.jpg";
-  # See: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
+  # See:
+  # * supported: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
+  # * gallery: https://tinted-theming.github.io/tinted-gallery/
   theme = "dracula";
   # Autogenerate theme based on this image if theme is null.
   stylixImage = ../../wallpapers/nix-wallpaper-stripes-logo.png;
 
   # See:
-  # * https://github.com/NotAShelf/nvf/blob/main/modules/plugins/statusline/lualine/lualine.nix
-  # * https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
+  # * supported: https://github.com/NotAShelf/nvf/blob/main/modules/plugins/statusline/lualine/lualine.nix
+  # * gallery: https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
   vimLineTheme = "onedark";
 
   # Set Waybar

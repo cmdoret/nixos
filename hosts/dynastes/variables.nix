@@ -33,12 +33,16 @@
   # among files in ./wallpapers, filename only
   lockScreenImage = "china-skyscrapers-night.jpg";
   rofiImage = "neon-buildings-down.jpg";
-  # See: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
+  # See:
+  # * supported: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
+  # * gallery: https://tinted-theming.github.io/tinted-gallery/
   theme = "dracula";
   # Autogenerate theme based on this image if theme is null.
   stylixImage = ../../wallpapers/neon-buildings-down.jpg;
 
-  # See: https://github.com/NotAShelf/nvf/blob/main/modules/plugins/statusline/lualine/lualine.nix
+  # See:
+  # * supported: https://github.com/NotAShelf/nvf/blob/main/modules/plugins/statusline/lualine/lualine.nix
+  # * gallery: https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
   vimLineTheme = "dracula";
 
   # Set Animation style
