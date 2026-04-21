@@ -38,6 +38,7 @@
   # Autogenerate theme based on this image if theme is null.
   stylixImage = ../../wallpapers/neon-buildings-down.jpg;
 
+  # See: https://github.com/NotAShelf/nvf/blob/main/modules/plugins/statusline/lualine/lualine.nix
   vimLineTheme = "dracula";
 
   # Set Animation style

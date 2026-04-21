@@ -41,6 +41,9 @@
   # Autogenerate theme based on this image if theme is null.
   stylixImage = ../../wallpapers/pine.jpg;
 
+  # See:
+  # * https://github.com/NotAShelf/nvf/blob/main/modules/plugins/statusline/lualine/lualine.nix
+  # * https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
   vimLineTheme = "onedark";
 
   # Set Animation style

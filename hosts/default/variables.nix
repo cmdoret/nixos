@@ -38,7 +38,9 @@
   # Autogenerate theme based on this image if theme is null.
   stylixImage = ../../wallpapers/nix-wallpaper-stripes-logo.png;
 
-  #  See: https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
+  # See:
+  # * https://github.com/NotAShelf/nvf/blob/main/modules/plugins/statusline/lualine/lualine.nix
+  # * https://github.com/nvim-lualine/lualine.nvim/blob/a94fc68960665e54408fe37dcf573193c4ce82c9/THEMES.md
   vimLineTheme = "onedark";
 
   # Set Waybar
