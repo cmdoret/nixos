@@ -6,7 +6,6 @@
 {
   # These are `pkgs` from `input.nixpkgs`.
   pkgs,
-  lib,
   ...
 }: [
   {
