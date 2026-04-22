@@ -28,7 +28,7 @@
         };
 
         goModules = import ./go-env.nix {
-          inherit pkgs inputs;
+          inherit pkgs;
         };
       in
       {

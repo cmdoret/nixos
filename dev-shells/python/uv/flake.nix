@@ -24,7 +24,7 @@
         };
 
         # python environment defined separately
-        pythonModules = import ./python-uv.nix {
+        pythonModules = import ./uv-env.nix {
           inherit pkgs;
           inherit (pkgs) lib;
         };

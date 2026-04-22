@@ -20,7 +20,7 @@
         };
 
         # python environment defined separately
-        pythonModules = import ./devenv.nix {
+        pythonModules = import ./uv-cuda-env.nix {
           inherit pkgs;
           inherit (pkgs) lib;
         };
