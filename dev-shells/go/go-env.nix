@@ -5,13 +5,11 @@
       curl
     ];
 
-    languages.r = {
+    languages.go = {
       enable = true;
-      radian.enable = true;
-    };
-
-    env = {
-      R_LIBS_USER = ".r-local-lib";
+      delve.enable = true;
+      lsp.enable = true;
+      version = "1.26.2";
     };
   }
 ]
