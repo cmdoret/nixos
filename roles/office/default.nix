@@ -8,6 +8,7 @@
     environment.systemPackages = with pkgs; [
       libreoffice
       slack
+      zoom-us
     ];
   };
 }
