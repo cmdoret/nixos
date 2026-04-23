@@ -1,5 +1,8 @@
 
 {pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    gnome-control-center
+  ];
 
   programs.evolution = {
     enable = true;
