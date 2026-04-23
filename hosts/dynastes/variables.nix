@@ -31,12 +31,12 @@
   # among files in ./modules/home/hyprland/avatar, filename only, must be .jpg
   avatarImage = "dynastes-neon.jpg";
   # among files in ./wallpapers, filename only
-  lockScreenImage = "china-skyscrapers-night.jpg";
-  rofiImage = "neon-buildings-down.jpg";
+  lockScreenImage = "neon-buildings-down.jpg";
+  rofiImage = "china-skyscrapers-night.jpg";
   # See:
   # * supported: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
   # * gallery: https://tinted-theming.github.io/tinted-gallery/
-  theme = "dracula";
+  theme = null;
   # Autogenerate theme based on this image if theme is null.
   stylixImage = ../../wallpapers/neon-buildings-down.jpg;
 
