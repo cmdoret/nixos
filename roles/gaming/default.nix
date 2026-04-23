@@ -9,7 +9,7 @@
     environment.systemPackages = with pkgs; [
       heroic
       lutris
-      osu-lazer-bin
+      #osu-lazer-bin
     ];
   };
 }
