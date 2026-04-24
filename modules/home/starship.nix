@@ -7,9 +7,8 @@
     enableBashIntegration = true;
     enableNushellIntegration = true;
     settings = {
-      format = "[](white)$os[](bg:blue fg:white)$directory[](blue)$git_branch$git_status$cmd_duration $fill $right_format$line_break$character";
-      right_format = "[](green)$shell$singularity$kubernetes$vcsh$fossil_branch$pijul_channel$c$conda$cpp$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$fortran$golang$guix_shell$haskell$haxe$helm$java$julia$kotlin$gradle$lua$maven$nim$nodejs$ocaml$opa$perl$php$pulumi$purescript$python$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$vlang$vagrant$xmake$zig$buf$conda$pixi$meson$spack$aws$gcloud$openstack$azure$crystal[](green)";
-      continuation_prompt = "[▸▹ ](dimmed white)";
+      format = "[](white)$os[](bg:blue fg:white)$directory[](blue)$git_branch$git_status$cmd_duration $fill [](green)$shell$singularity$kubernetes$vcsh$fossil_branch$pijul_channel$c$conda$cpp$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$fortran$golang$guix_shell$haskell$haxe$helm$java$julia$kotlin$gradle$lua$maven$nim$nodejs$ocaml$opa$perl$php$pulumi$purescript$python$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$vlang$vagrant$xmake$zig$buf$conda$pixi$meson$spack$aws$gcloud$openstack$azure$crystal[](green)$line_break$character";
+      continuation_prompt = "[▸▹ ](white)";
       fill.symbol = " ";
 
       username = {
