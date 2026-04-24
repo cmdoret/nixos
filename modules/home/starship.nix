@@ -101,10 +101,12 @@
 
       shell = {
         disabled = false;
-        style = "bg:green fg:black";
+        style = "bold bg:green fg:black";
         format = "[$indicator ]($style)";
-        bash_indicator = "";
+        bash_indicator = "";
         fish_indicator = "";
+        zsh_indicator = "zsh";
+        nu_indicator = "nu";
       };
 
       c = {
@@ -151,12 +153,12 @@
       };
 
       nix_shell = {
-        format = "[$symbol$state( ($name))]($style) ";
+        format = "[$symbol$state ]($style)";
         disabled = false;
-        impure_msg = "[impure](bold black)";
-        pure_msg = "[pure](bold black)";
+        impure_msg = "[impure](bold fg:black bg:green)";
+        pure_msg = "[pure](bold fg:black bg:green)";
         style = "bg:green";
-        symbol = " ";
+        symbol = "󱩰 ";
       };
 
       nodejs = {
