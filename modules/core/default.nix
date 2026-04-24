@@ -16,7 +16,6 @@
     ./restic.nix
     ./security.nix
     ./services.nix
-    ./starfish.nix
     ./stylix.nix
     ./syncthing.nix
     ./system.nix

@@ -3,7 +3,10 @@
     enable = true;
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
+      set -g fish_key_bindings fish_vi_key_bindings
     '';
+    generateCompletions = true;
+
     shellAliases = {
         c = "clear";
         cat = "bat";

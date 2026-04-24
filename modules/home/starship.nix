@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{pkgs, ...}:
+{
   programs.starship = {
     enable = true;
     package = pkgs.starship;
@@ -6,8 +7,9 @@
     enableFishIntegration = true;
     enableBashIntegration = true;
     enableNushellIntegration = true;
+
     settings = {
-      format = "[](white)$os[](bg:blue fg:white)$directory[](blue)$git_branch$git_status$cmd_duration $fill [](green)$shell$singularity$kubernetes$vcsh$fossil_branch$pijul_channel$c$conda$cpp$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$fortran$golang$guix_shell$haskell$haxe$helm$java$julia$kotlin$gradle$lua$maven$nim$nodejs$ocaml$opa$perl$php$pulumi$purescript$python$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$vlang$vagrant$xmake$zig$buf$conda$pixi$meson$spack$aws$gcloud$openstack$azure$crystal[](green)$line_break$character";
+      format = "[](white)$os[](bg:blue fg:white)$directory[](blue)$git_branch$git_status$cmd_duration $fill [](green)$nodejs$c$rust$golang$php$java$haskell$python$docker_context$conda$nix_shell$shell[](green)$line_break$character";
       continuation_prompt = "[▸▹ ](white)";
       fill.symbol = " ";
 
@@ -55,10 +57,10 @@
         format = "$symbol";
         success_symbol = "[󱞩 ](bold green)";
         error_symbol = "[ ](bold red)";
-        vimcmd_symbol = "[](green)[I](bold bg:green fg:bright-white)[](green)";
-        vimcmd_replace_one_symbol = "[](magenta)[r](bold bg:magenta fg:bright-white)[](magenta)";
-        vimcmd_replace_symbol = "[](magenta)[R](bold bg:magenta fg:bright-white)[](magenta)";
-        vimcmd_visual_symbol = "[](orange)[V](bold bg:orange fg:bright-white)[](orange)";
+        vimcmd_symbol = "[ ](white)";
+        vimcmd_replace_one_symbol = "[󰇾 ](magenta)";
+        vimcmd_replace_symbol = "[ ](magenta)";
+        vimcmd_visual_symbol = "[󱎸 ](orange)";
       };
 
       cmd_duration = {
@@ -101,14 +103,8 @@
         disabled = false;
         style = "bg:green fg:black";
         format = "[$indicator ]($style)";
-        bash_indicator = "";
+        bash_indicator = "";
         fish_indicator = "";
-      };
-
-      nodejs = {
-        symbol = "";
-        style = "bg:green";
-        format = "[[ $symbol( $version) ](fg:black bg:green)]($style)";
       };
 
       c = {
@@ -117,10 +113,17 @@
         format = "[[ $symbol( $version) ](fg:black bg:green)]($style)";
       };
 
-      rust = {
-        symbol = "";
-        style = "bg:green";
-        format = "[[ $symbol( $version) ](fg:black bg:green)]($style)";
+      conda = {
+        symbol = "  ";
+        style = "fg:black bg:blue";
+        format = "[$symbol$environment ]($style)";
+        ignore_base = false;
+      };
+
+      docker_context = {
+        symbol = "";
+        style = "bg:blue";
+        format = "[[ $symbol( $context) ](fg:black bg:blue)]($style)";
       };
 
       golang = {
@@ -128,11 +131,13 @@
         style = "bg:green";
         format = "[[ $symbol( $version) ](fg:black bg:green)]($style)";
       };
-      php = {
-        symbol = "";
+
+      haskell = {
+        symbol = "";
         style = "bg:green";
         format = "[[ $symbol( $version) ](fg:black bg:green)]($style)";
       };
+
       java = {
         symbol = " ";
         style = "bg:green";
@@ -145,8 +150,23 @@
         format = "[[ $symbol( $version) ](fg:black bg:green)]($style)";
       };
 
-      haskell = {
-        symbol = "";
+      nix_shell = {
+        format = "[$symbol$state( ($name))]($style) ";
+        disabled = false;
+        impure_msg = "[impure](bold black)";
+        pure_msg = "[pure](bold black)";
+        style = "bg:green";
+        symbol = " ";
+      };
+
+      nodejs = {
+        symbol = "";
+        style = "bg:green";
+        format = "[[ $symbol( $version) ](fg:black bg:green)]($style)";
+      };
+
+      php = {
+        symbol = "";
         style = "bg:green";
         format = "[[ $symbol( $version) ](fg:black bg:green)]($style)";
       };
@@ -157,25 +177,10 @@
         format = "[[ $symbol( $version)(\(#$virtualenv\)) ](fg:black bg:green)]($style)";
       };
 
-      docker_context = {
-        symbol = "";
-        style = "bg:blue";
-        format = "[[ $symbol( $context) ](fg:black bg:blue)]($style)";
-      };
-
-      conda = {
-        symbol = "  ";
-        style = "fg:black bg:blue";
-        format = "[$symbol$environment ]($style)";
-        ignore_base = false;
-      };
-      nix_shell = {
-        format = "[$symbol$state( ($name))]($style) ";
-        disabled = false;
-        impure_msg = "[impure](bold red)";
-        pure_msg = "[pure](bold green)";
-        style = "bold blue";
-        symbol = " ";
+      rust = {
+        symbol = "";
+        style = "bg:green";
+        format = "[[ $symbol( $version) ](fg:black bg:green)]($style)";
       };
     };
   };
