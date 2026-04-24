@@ -22,6 +22,9 @@
         name = "cmdoret";
         extensions.force = true;
         containersForce = true;
+        settings = {
+          "browser.startup.homepage" = "https://kagi.com";
+        };
         containers = {
           base = {
             color = "blue";
