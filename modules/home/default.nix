@@ -9,6 +9,7 @@ in {
     ./btop.nix
     ./cava.nix
     ./fastfetch
+    ./firefox.nix
     ./fzf.nix
     ./gh.nix
     ./ghostty.nix

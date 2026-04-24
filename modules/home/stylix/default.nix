@@ -14,6 +14,7 @@
     rofi.enable = false;
     vesktop.enable = true;
     waybar.enable = false;
+    zed.enable = true;
   };
 
   # replicates https://github.com/nix-community/stylix/commit/044ac0cc6d914f1dac22a728013bc3797f77cfab

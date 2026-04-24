@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   programs = {
-    firefox.enable = true; # Firefox is not installed by default
     dconf.enable = true;
     seahorse.enable = true;
     hyprland.enable = true; #create desktop file and depedencies if you switch to GUI login MGR
