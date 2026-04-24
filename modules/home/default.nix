@@ -3,13 +3,13 @@
 in {
   imports = [
     #./amfora.nix
-    ./bash.nix
-    ./bashrc-personal.nix
+    ./bash
     ./bat.nix
     ./btop.nix
     ./cava.nix
     ./fastfetch
     ./firefox.nix
+    ./fish.nix
     ./fzf.nix
     ./gh.nix
     ./ghostty.nix

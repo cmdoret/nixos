@@ -23,10 +23,21 @@ in {
       };
     };
   };
+  programs.fish.enable = true;
+  # Keep bash for emergency backup, but use fish as default.
+  programs.bash = {
+    interactiveShellInit = ''
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
+  };
+
   users.mutableUsers = true;
-  programs.zsh.enable = true;
   users.users.root = {
-    shell = pkgs.zsh;
+    shell = pkgs.bash;
     extraGroups = ["networkmanager" "wheel"];
     # Don't set a password, this will disable password login for root
     hashedPassword = null;
@@ -44,7 +55,7 @@ in {
       "scanner"
       "wheel"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     uid = 1000;
     ignoreShellProgramCheck = true;
   };

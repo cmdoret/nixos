@@ -12,6 +12,7 @@
     nvf.enable = true;
     qt.enable = true;
     rofi.enable = false;
+    starship.enable = true;
     vesktop.enable = true;
     waybar.enable = false;
     zed.enable = true;
