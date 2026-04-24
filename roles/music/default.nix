@@ -4,6 +4,7 @@
     environment.systemPackages = with pkgs; [
       audacity
       feishin
+      jellyfin-desktop
       picard
       rhythmbox
       supersonic
