@@ -20,6 +20,7 @@ in {
     ./kitty.nix
     ./k9s.nix
     ./noctalia
+    ./nushell.nix
     ./nvf.nix
     ./python.nix
     ./qt.nix
