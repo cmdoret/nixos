@@ -155,8 +155,8 @@
       nix_shell = {
         format = "[$symbol$state ]($style)";
         disabled = false;
-        impure_msg = "[impure](bold fg:black bg:green)";
-        pure_msg = "[pure](bold fg:black bg:green)";
+        impure_msg = "[impure](fg:black bg:green)";
+        pure_msg = "[pure](fg:black bg:green)";
         style = "bg:green";
         symbol = "󱩰 ";
       };
