@@ -15,6 +15,7 @@
     starship.enable = true;
     vesktop.enable = true;
     waybar.enable = false;
+    zathura.enable = true;
     zed.enable = true;
   };
 
