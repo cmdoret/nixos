@@ -96,11 +96,55 @@ in {
           action = ":bprevious<CR>";
           desc = "previous buffer";
         }
+        # Workaround to avoid maximizing filetree buffer when closing last pane
         {
           key = "<leader>w";
           mode = ["n"];
           action = ":bprevious | :bdelete #<CR>";
           desc = "close buffer";
+        }
+        # No clipboard override when pressing s, c, x or Del.
+        {
+          key = "s";
+          action = "\"_s";
+          mode = ["n" "v"];
+        }
+        {
+          key = "S";
+          action = "\"_S";
+          mode = ["n" "v"];
+        }
+        
+        {
+          key = "x";
+          action = "\"_x";
+          mode = ["n" "v"];
+        }
+        {
+          key = "X";
+          action = "\"_x";
+          mode = ["n" "v"];
+        }
+        {
+          key = "c";
+          action = "\"_c";
+          mode = ["n" "v"];
+        }
+        {
+          key = "C";
+          action = "\"_c";
+          mode = ["n" "v"];
+        }
+        {
+          key = "<Del>";
+          action = "\"_x";
+          mode = ["n" "v"];
+        }
+        # No clipboard override when pasting in visual mode (paste and yank again)            
+        {
+          key = "p";
+          action = "pgvy";
+          mode = ["v"];
         }
         {
           key = "jk";
