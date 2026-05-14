@@ -8,8 +8,8 @@
     programs.gamemode.enable = true;
     environment.systemPackages = with pkgs; [
       heroic
-      lutris
-      #osu-lazer-bin
+      #lutris
+      osu-lazer-bin
     ];
   };
 }
