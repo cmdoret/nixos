@@ -79,6 +79,7 @@
       }
       {
         id = "Tray";
+        pinned = [ "Slack" "Vesktop" "Steam" ];
       }
       {
         id = "plugin:usb-drive-manager";
