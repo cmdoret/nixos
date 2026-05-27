@@ -8,7 +8,7 @@
 
   inputs = {
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     antigravity-nix = {
@@ -21,9 +21,9 @@
     };
     jail-nix.url = "github:MohrJonas/jail.nix";
     nh.url = "github:viperML/nh";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nvf.url = "github:NotAShelf/nvf?ref=refs/tags/v0.8";
-    stylix.url = "github:nix-community/stylix/release-25.11";
+    stylix.url = "github:nix-community/stylix";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
