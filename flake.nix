@@ -27,10 +27,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     jail-nix.url = "github:MohrJonas/jail.nix";
-    nh.url = "github:viperML/nh";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nvf.url = "github:NotAShelf/nvf?ref=refs/tags/v0.8";
-    stylix.url = "github:nix-community/stylix";
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
