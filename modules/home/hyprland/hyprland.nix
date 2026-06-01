@@ -91,8 +91,8 @@ in {
         workspace_swipe_forever = 1;
       };
 
+      "$modifier" = "SUPER";
       general = {
-        "$modifier" = "SUPER";
         layout = "dwindle";
         gaps_in = 6;
         gaps_out = 8;
