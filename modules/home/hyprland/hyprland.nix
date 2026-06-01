@@ -37,6 +37,7 @@ in {
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
+    configType = "hyprlang";
     systemd = {
       enable = true;
       enableXdgAutostart = true;
