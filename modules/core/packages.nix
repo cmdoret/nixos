@@ -67,7 +67,7 @@
     mullvad-browser # privacy-hardened browser
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nextcloud-client # Personal cloud-storage
-    nixfmt-rfc-style # Nix Formatter
+    nixfmt # Nix Formatter
     nix-index # For Searching Nix Packages
     obs-studio # Video capture
     pavucontrol # For Editing Audio Levels & Devices
