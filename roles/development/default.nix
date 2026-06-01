@@ -8,9 +8,6 @@
       nodejs
       uv
       zed-editor
-      (pkgs.callPackage ../../packages/antigravity-jail {
-        inherit (inputs) antigravity-nix jail-nix;
-      })
     ];
   };
 }
