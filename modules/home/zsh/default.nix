@@ -1,5 +1,6 @@
 {
   host,
+  config,
   pkgs,
   lib,
   ...
@@ -11,6 +12,7 @@
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
+    dotDir = "${config.xdg.configHome}/zsh";
     syntaxHighlighting.enable = true;
 
     oh-my-zsh = {
@@ -19,8 +21,8 @@
     };
 
     initContent = ''
-      if [ -f $HOME/.zshrc-personal ]; then
-        source $HOME/.zshrc-personal
+      if [ -f $HOME/.config/zsh/.zshrc-personal ]; then
+        source $HOME/.config/zsh/.zshrc-personal
       fi
     '';
 
