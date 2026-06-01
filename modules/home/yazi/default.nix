@@ -5,6 +5,7 @@ let
   theme = import ./theme.nix;
 in {
   programs.yazi = {
+    shellWrapperName = "yy";
     enable = true;
     settings = settings;
     keymap = keymap;
