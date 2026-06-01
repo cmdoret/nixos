@@ -13,30 +13,49 @@
   ];
   boot = {
     initrd = {
-      availableKernelModules = ["xhci_pci" "thunderbolt" "nvme" "rtsx_pci_sdmmc"];
-      kernelModules = ["dm-snapshot"];
+      availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
+      kernelModules = [ ];
       luks.devices = {
-        root = {
+        "enc" = {
           device = "/dev/nvme0n1p2";
-          preLVM = true;
         };
       };
     };
-    kernelModules = ["kvm-intel"];
-    supportedFilesystems = ["nfs"];
+    kernelModules = [ "kvm-intel" ];
+    supportedFilesystems = [ "nfs" "btrfs" ];
     extraModulePackages = [];
   };
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-label/NIXROOT";
-      fsType = "ext4";
+      device = "/dev/mapper/enc";
+      fsType = "btrfs";
+      options = [ "subvol=root" "compress=zstd" "noatime" ];
     };
+    "/home" = {
+      device = "/dev/mapper/enc";
+      fsType = "btrfs";
+      options = [ "subvol=home" "compress=zstd" "noatime" ];
+    };
+
+    "/nix" = {
+      device = "/dev/mapper/enc";
+      fsType = "btrfs";
+      options = [ "subvol=nix" "compress=zstd" "noatime" ];
+    };
+
+    "/var/log" = {
+      device = "/dev/mapper/enc";
+      fsType = "btrfs";
+      options = [ "subvol=log" "compress=zstd" "noatime" ];
+    };
+
     "/boot" = {
-      device = "/dev/disk/by-label/NIXBOOT";
+      device = "/dev/nvme0n1p1";
       fsType = "vfat";
-      options = ["fmask=0022" "dmask=0022"];
+      options = [ "fmask=0022" "dmask=0022" ];
     };
+
     "/mnt/backup" = {
       device = "192.168.1.151:/mnt/vault/backup/apis";
       fsType = "nfs";
@@ -52,9 +71,7 @@
     };
   };
 
-  swapDevices = [
-    {device = "/dev/disk/by-label/swap";}
-  ];
+  swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
