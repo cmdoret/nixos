@@ -157,7 +157,7 @@
         disabled = false;
         impure_msg = "[impure](fg:black bg:green)";
         pure_msg = "[pure](fg:black bg:green)";
-        style = "bg:green";
+        style = "fg:black bg:green";
         symbol = "󱩰 ";
       };
 
