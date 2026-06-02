@@ -12,13 +12,18 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "electron-39.8.10"
+    ];
+  };
 
   environment.systemPackages = with pkgs; [
     #amfora # Fancy Terminal Browser For Gemini Protocol
     anki # flashcard and SRS program
     appimage-run # Needed For AppImage Support
-    #bitwarden-desktop # password manager
+    bitwarden-desktop # password manager
     bottom # btop like util
     brightnessctl # For Screen Brightness Control
     chromium # web browser
@@ -57,7 +62,7 @@
     libnotify # For Notifications
     libreoffice # office suite
     lm_sensors # Used For Getting Hardware Temps
-    #logseq # personal knowledge management
+    logseq # personal knowledge management
     lolcat # Add Colors To Your Terminal Command Output
     loupe # gtk based image viewer
     lshw # Detailed Hardware Information
