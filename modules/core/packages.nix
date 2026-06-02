@@ -12,13 +12,6 @@
     };
   };
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-      "electron-39.8.10"
-    ];
-  };
-
   environment.systemPackages = with pkgs; [
     #amfora # Fancy Terminal Browser For Gemini Protocol
     anki # flashcard and SRS program
