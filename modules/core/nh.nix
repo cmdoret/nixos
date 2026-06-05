@@ -1,12 +1,11 @@
 {
   pkgs,
-  inputs,
   username,
   ...
 }: {
   programs.nh = {
     enable = true;
-    package = inputs.nh.packages.${pkgs.system}.default; # drop if github:nix-community/nh #323 is fixed
+    package = pkgs.nh;
     clean = {
       enable = true;
       extraArgs = "--keep-since 7d --keep 5";

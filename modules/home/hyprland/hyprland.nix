@@ -13,7 +13,7 @@
     ;
 in {
   home.packages = with pkgs; [
-    swww
+    awww 
     grim
     slurp
     wl-clipboard
@@ -37,6 +37,7 @@ in {
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
+    configType = "hyprlang";
     systemd = {
       enable = true;
       enableXdgAutostart = true;
@@ -52,7 +53,7 @@ in {
         "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user start hyprpolkitagent"
-        #"killall -q swww;sleep .5 && swww-daemon"
+        #"killall -q awww;sleep .5 && awww-daemon"
         #"killall -q waybar;sleep .5 && waybar"
         #"killall -q swaync;sleep .5 && swaync"
         #"sleep 1.0 && swww img ${stylixImage}"
@@ -90,8 +91,8 @@ in {
         workspace_swipe_forever = 1;
       };
 
+      "$modifier" = "SUPER";
       general = {
-        "$modifier" = "SUPER";
         layout = "dwindle";
         gaps_in = 6;
         gaps_out = 8;
@@ -109,7 +110,6 @@ in {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         enable_swallow = false;
-        vfr = true; # Variable Frame Rate
         vrr = 2; #Variable Refresh Rate  Might need to set to 0 for NVIDIA/AQ_DRM_DEVICES
         # Screen flashing to black momentarily or going black when app is fullscreen
         # Try setting vrr to 0
@@ -120,7 +120,6 @@ in {
       };
 
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
         force_split = 2;
       };

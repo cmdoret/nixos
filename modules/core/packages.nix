@@ -6,14 +6,11 @@
     hyprlock.enable = true; #resolve pam issue https://gitlab.com/Zaney/zaneyos/-/issues/164
     fuse.userAllowOther = true;
     mtr.enable = true;
-    adb.enable = true;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
     };
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     #amfora # Fancy Terminal Browser For Gemini Protocol
@@ -68,7 +65,7 @@
     mullvad-browser # privacy-hardened browser
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nextcloud-client # Personal cloud-storage
-    nixfmt-rfc-style # Nix Formatter
+    nixfmt # Nix Formatter
     nix-index # For Searching Nix Packages
     obs-studio # Video capture
     pavucontrol # For Editing Audio Levels & Devices

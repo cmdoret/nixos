@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [zsh];
 
-  home.file."./.zshrc-personal".text = ''
+  home.file."./.config/zsh/.zshrc-personal".text = ''
 
       #!/usr/bin/env zsh
 

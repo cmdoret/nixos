@@ -1,4 +1,7 @@
-{...}: {
+{
+  config,
+  ...
+}: {
   stylix.targets.firefox = {
     profileNames = [
       "clean-profile"
@@ -8,6 +11,7 @@
   };
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     profiles = {
       clean-profile = {
         extensions.force = true;
