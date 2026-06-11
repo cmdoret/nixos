@@ -30,7 +30,11 @@
   printEnable = false;
 
   # Set Stylix Image
-  stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
+  stylixImage = ../../wallpapers/pulsar.jpg;
+  lockScreenImage = ../../wallpapers/pulsar.jpg;
+  theme = "onedark";
+  vimLineTheme = "horizon";
+  avatarImage = "sootball.jpg";
 
   # Set Waybar
   # # Available options are:

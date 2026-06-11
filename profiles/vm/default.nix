@@ -1,9 +1,9 @@
-{...}: {
+{lib, ...}: {
   imports = [../base.nix];
 
   drivers.amdgpu.enable = false;
   drivers.nvidia.enable = false;
   drivers.nvidia-prime.enable = false;
   drivers.intel.enable = false;
-  vm.guest-services.enable = true;
+  vm.guest-services.enable = lib.mkForce true;
 }
