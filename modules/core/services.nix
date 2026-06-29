@@ -15,7 +15,9 @@
     kbfs.enable = false;
     tumbler.enable = true; # Image/video preview
     gnome.gnome-keyring.enable = true;
-
+    kmscon.extraConfig = ''
+      font-size=12
+    '';
     smartd = {
       enable =
         if profile == "vm"
