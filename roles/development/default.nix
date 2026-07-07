@@ -7,6 +7,7 @@ in
 {
   config = lib.mkIf config.development.enable {
     environment.systemPackages = with pkgs; [
+      azure-cli
       docker-sbx
       kubectl
       kubelogin
