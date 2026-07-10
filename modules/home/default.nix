@@ -22,6 +22,7 @@ in {
     ./noctalia
     ./nushell.nix
     ./nvf.nix
+    ./obsidian.nix
     ./python.nix
     ./qt.nix
     ./scripts

@@ -10,6 +10,7 @@
     k9s.enable = true;
     noctalia-shell.enable = false;
     nvf.enable = true;
+    obsidian.enable = true;
     qt.enable = true;
     rofi.enable = false;
     starship.enable = true;
