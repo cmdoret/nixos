@@ -1,0 +1,74 @@
+/*
+debug: env GTK_DEBUG=interactive ghostty
+https://docs.gtk.org/gtk4/css-overview.html
+https://docs.gtk.org/gtk4/css-properties.html
+*/
+
+/* --- merged titlebar + tab row --- */
+headerbar,
+headerbar > windowhandle,
+headerbar .title {
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* window buttons (close/min/max) share this row in `tabs` mode and set a
+ * hidden ~24px floor. Shrink them — or drop them entirely by letting Hyprland
+ * own the frame with `window-decoration = none` in your ghostty config. */
+headerbar windowcontrols,
+headerbar windowcontrols button,
+headerbar button.titlebutton {
+  min-height: 0;
+  min-width: 0;
+  padding: 0 2px;
+  margin: 0;
+}
+
+/* --- the tab strip --- */
+tabbar tabbox {
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
+
+/* the new-tab (+) and any start/end action buttons in the bar */
+tabbar button {
+  min-height: 0;
+  min-width: 0;
+  padding: 0 4px;
+  margin: 0;
+}
+
+tabbar tab {
+  min-height: 0;
+  padding: 0 8px;          /* horizontal breathing room, zero vertical */
+  margin: 0;
+}
+
+/* the widgets INSIDE each tab are what actually keep it tall */
+tabbar tab box {
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+tabbar tab image {           /* per-tab icon */
+  min-height: 0;
+  min-width: 0;
+  -gtk-icon-size: 12px;
+}
+/* close button — hidden (collapse size + make invisible) */
+tabbar tab button {
+  opacity: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  -gtk-icon-size: 0;      /* collapses the × icon so it reserves no space */
+}
+tabbar tab label {
+  font-size: 12px;           /* main lever for final height */
+  padding: 0;
+  margin: 0;
+}

@@ -10,17 +10,17 @@
     #theme = Aardvark Blue
     #theme = GruvboxDarkHard
     adjust-cell-height = 10%
+    window-decoration = none
     window-theme = dark
     window-height = 32
     window-width = 110
     background-opacity = 0.95
-    background-blur-radius = 60
     selection-background = #2d3f76
     selection-foreground = #c8d3f5
     cursor-style = bar
     mouse-hide-while-typing = true
 
-    custom-shader = ${./cursor_tail.glsl}
+    custom-shader = ${./cursor-sweep.glsl}
 
     # keybindings
     keybind = alt+s>r=reload_config
@@ -77,7 +77,9 @@
     wait-after-command = false
     shell-integration = detect
     window-save-state = always
+    gtk-custom-css = ${./tab-style.css}
     gtk-single-instance = true
+    gtk-wide-tabs = true 
     unfocused-split-opacity = 0.5
     quick-terminal-position = center
     shell-integration-features = cursor,sudo
