@@ -88,10 +88,10 @@ in {
       ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
       ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
       # noctalia
-      "$modifier,escape,exec,noctalia-shell ipc call lockScreen lock"
-      "$modifier,D,exec,noctalia-shell ipc call launcher toggle"
-      "$modifier SHIFT,S,exec,noctalia-shell ipc call sessionMenu toggle"
-      "$modifier,E,exec,noctalia-shell ipc call launcher emoji"
+      "$modifier,escape,exec,noctalia msg session lock"
+      "$modifier,D,exec,noctalia msg panel-toggle launcher"
+      "$modifier SHIFT,S,exec,noctalia msg panel-toggle session"
+      "$modifier,E,exec,noctalia msg panel-toggle launcher /emo"
       # replaced by noctalia
       #"$modifier,E,exec,emopicker9000"
       #"$modifier SHIFT,S,exec,wlogout"
