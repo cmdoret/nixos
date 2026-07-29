@@ -290,6 +290,18 @@ in {
           action = "<cmd>lua require('spectre').open_visual()<CR>";
           desc = "Search current word.";
         }
+        {
+          key = "<leader>be";
+          mode = ["v"];
+          action = "c<c-r>=system('base64 --wrap=0', @\")<cr><esc>";
+          desc = "Base64 Encode";
+        }
+        {
+          key = "<leader>bd";
+          mode = ["v"];
+          action = "c<c-r>=system('base64 --wrap=0 -d', @\")<cr><esc>";
+          desc = "Base64 Decode";
+        }
       ];
 
       telescope.enable = true;
