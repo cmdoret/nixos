@@ -318,7 +318,7 @@ in {
         clang.enable = true;
         css = {
           enable = false;
-          format.type = ["prettierd"];
+          format.type = ["prettier"];
         };
         go = {
           enable = true;
@@ -336,7 +336,7 @@ in {
         typescript = {
           enable = true;
           lsp.enable = true;
-          format.type = ["prettierd"];
+          format.type = ["prettier"];
           extensions.ts-error-translator.enable = true;
         };
         typst.enable = true;
