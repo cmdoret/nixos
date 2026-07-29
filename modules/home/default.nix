@@ -12,7 +12,7 @@ in {
     ./fish.nix
     ./fzf.nix
     ./gh.nix
-    ./ghostty.nix
+    ./ghostty
     ./git.nix
     ./gtk.nix
     ./htop.nix

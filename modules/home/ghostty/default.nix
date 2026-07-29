@@ -20,6 +20,8 @@
     cursor-style = bar
     mouse-hide-while-typing = true
 
+    custom-shader = ${./cursor_tail.glsl}
+
     # keybindings
     keybind = alt+s>r=reload_config
     keybind = alt+s>x=close_surface

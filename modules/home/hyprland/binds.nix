@@ -10,7 +10,7 @@ in {
       "$modifier,Return,exec,${terminal}"
       "$modifier SHIFT,B,exec,web-search"
       "$modifier,B,exec,${browser}"
-      "$modifier,Y,exec,kitty -e yazi"
+      "$modifier,Y,exec,${terminal} -e yazi"
       "$modifier,S,exec,screenshootin"
       "$modifier,C,exec,hyprpicker -a"
       "$modifier,T,exec,pypr toggle term"
