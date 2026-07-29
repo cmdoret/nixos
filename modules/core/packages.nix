@@ -55,7 +55,7 @@
     libnotify # For Notifications
     libreoffice # office suite
     lm_sensors # Used For Getting Hardware Temps
-    logseq # personal knowledge management
+    #logseq # personal knowledge management
     lolcat # Add Colors To Your Terminal Command Output
     loupe # gtk based image viewer
     lshw # Detailed Hardware Information
