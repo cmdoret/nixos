@@ -25,6 +25,15 @@ in {
         tabstop = 4;
         shiftwidth = 2;
         wrap = false;
+
+        # Fold behavior
+        foldenable = true;
+        foldlevel = 99;
+        foldlevelstart = 99;
+        foldcolumn = "1";
+        foldtext = "";
+        fillchars = "foldopen:v,foldclose:>,foldsep: ,foldinner: ";
+
       };
 
       clipboard = {
@@ -372,7 +381,11 @@ in {
       autocomplete.nvim-cmp.enable = true;
       snippets.luasnip.enable = true;
       tabline.nvimBufferline.enable = true;
-      treesitter.context.enable = false;
+      treesitter = {
+        enable = true;
+        context.enable = false;
+        fold = true;
+      };
       binds = {
         whichKey.enable = true;
         cheatsheet.enable = true;
