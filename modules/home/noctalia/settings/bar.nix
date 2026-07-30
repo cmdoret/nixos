@@ -70,7 +70,7 @@ in
     ram = sysmon "ram_pct" colored;
     net_rx = sysmon "net_rx" colored;
     net_tx = sysmon "net_tx" colored;
-    disk = sysmon "disk_used_pct" { path = "/"; }; # usage, not available
+    disk = sysmon "disk_used_pct" colored // { path = "/"; };
     battery = {
       display_mode = "graphic";
       scale = 0.8;

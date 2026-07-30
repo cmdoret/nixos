@@ -9,7 +9,7 @@ in
   shell = {
     avatar_path = "~/.face.icon";
     corner_radius_scale = 1.0;
-    app_icon_colorize = true;
+    app_icon_colorize = false;
     date_format = "%A, %d %B";
     launcher.compact = true;
     panel.open_near_click_control_center = true;
