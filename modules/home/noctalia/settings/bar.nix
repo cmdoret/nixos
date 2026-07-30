@@ -1,4 +1,4 @@
-{ }:
+{ pkgs }:
 let
   sysmon = stat: extra: { type = "sysmon"; show_label = false; inherit stat; } // extra;
   colored = { color = "primary"; icon_color = "on_surface"; };
@@ -33,6 +33,9 @@ in
   };
 
   widget = {
+    control_center = {
+      custom_image = "${pkgs.nixos-icons}/share/icons/hicolor/256x256/apps/nix-snowflake.png";
+    };
     network = {
       vpn_status = "both";
       show_vpn_label = true;

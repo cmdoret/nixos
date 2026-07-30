@@ -1,4 +1,4 @@
-{ inputs, username, host, ... }: let
+{ inputs, pkgs, username, host, ... }: let
   inherit (import ../../../hosts/${host}/variables.nix) lockScreenImage terminal;
   wallpaper = "/home/${username}/Pictures/Wallpapers/${lockScreenImage}";
 in
@@ -11,6 +11,6 @@ in
 
   programs.noctalia = {
     enable = true;
-    settings = import ./settings { inherit wallpaper; };
+    settings = import ./settings { inherit pkgs; inherit wallpaper; };
   };
 }

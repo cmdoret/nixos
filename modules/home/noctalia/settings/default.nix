@@ -1,10 +1,10 @@
-{ wallpaper }:
+{ pkgs, wallpaper }:
 let
   hyprLoad = "hyprctl reload";
 in
 {
   # bar hold widget *names*; their settings live in the [widget.*] tables
-  inherit (import ./bar.nix { }) bar widget;
+  inherit (import ./bar.nix { inherit pkgs; }) bar widget;
 
   shell = {
     avatar_path = "~/.face.icon";
