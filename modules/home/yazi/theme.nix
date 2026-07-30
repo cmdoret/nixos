@@ -8,7 +8,6 @@
       fg = "lightcyan";
       bg = "lightcyan";
     };
-    tab_width = 1;
     border_symbol = "│";
   };
   mode = { };
