@@ -18,10 +18,7 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell/legacy-v4";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    noctalia.url = "github:noctalia-dev/noctalia";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nvf = {
       url = "github:NotAShelf/nvf";

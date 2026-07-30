@@ -59,7 +59,7 @@ in {
         #"sleep 1.0 && swww img ${stylixImage}"
         "pypr &"
         "fcitx5 -d"
-        "noctalia-shell &"
+        "noctalia"
       ];
 
       input = {

@@ -1,89 +1,92 @@
-{}:
+{ pkgs }:
+let
+  sysmon = stat: extra: { type = "sysmon"; show_label = false; inherit stat; } // extra;
+  colored = { color = "primary"; icon_color = "on_surface"; };
+in
 {
-  density = "default";
-  barType = "simple";
-  position = "top";
-  showCapsule = false;
-  widgets = {
-    left = [
-      {
-        id = "ControlCenter";
-        useDistroLogo = true;
-      }
-      {
-        id = "Bluetooth";
-      }
-      {
-        id = "Network";
-      }
-      {
-        id = "VPN";
-        displayMode = "alwaysShow";
-      }
-      {
-        id = "plugin:tailscale";
-      }
-      {
-        id = "MediaMini";
-        useFixedWidth =  true;
-        hideWhenIdle = true;
-        showVisualizer =  true;
-        visualizerType = "wave";
-      }
+  bar.default = {
+    position = "top";
+    capsule = false;
+    margin_ends = 0;
+    start = [
+      "control-center"
+      "bluetooth"
+      "network"
+      "mic"
+      "volume"
+      "media"
+      "audio_visualizer"
     ];
-    center = [
-      {
-        id = "Workspace";
-        hideUnoccupied = false;
-        labelMode = "none";
-        showApplications = true;
-        showApplicationsHover = true;
-        colorizeIcons = true;
-        focusedColor = "primary";
-        occupiedColor = "none";
-        emptyColor = "none";
-      }
+    center = [ "taskbar" ];
+    end = [
+      "cpu"
+      "cpu_temp"
+      "ram"
+      "net_rx"
+      "net_tx"
+      "disk"
+      "battery"
+      "clock"
+      "notifications"
+      "tray"
     ];
-    right = [
-      {
-        id = "Microphone";
-        displayMode = "alwaysShow";
-      }
-      {
-        id = "Volume";
-        displayMode = "alwaysShow";
-      }
-      {
-        id = "SystemMonitor";
-        compactMode = true;
-        showNetworkStats = true;
-        showDiskUsage = true;
-        showDiskAvailable = false;
-      }
-      {
-        id = "Battery";
-        alwaysShowPercentage = false;
-        warningThreshold = 30;
-        showNoctaliaPerformance = true;
-        showPowerProfiles =true;
-      }
-      {
-        id = "Clock";
-        formatHorizontal = "HH:mm";
-        formatVertical = "HH mm";
-        useMonospacedFont = true;
-        usePrimaryColor = true;
-      }
-      {
-        id = "NotificationHistory";
-      }
-      {
-        id = "Tray";
-        pinned = [ "Slack" "Vesktop" "Steam" ];
-      }
-      {
-        id = "plugin:usb-drive-manager";
-      }
-    ];
+  };
+
+  widget = {
+    "control-center" = {
+      custom_image = "${pkgs.nixos-icons}/share/icons/hicolor/256x256/apps/nix-snowflake.png";
+    };
+    network = {
+      vpn_status = "both";
+      show_vpn_label = true;
+      show_label = false;
+    };
+    media = {
+      hide_when_no_media = true;
+    };
+    audio_visualizer = {
+      enabled = false;
+      show_when_idle = false;
+    };
+    taskbar = {
+      group_by_workspace = true;
+      workspace_group_content = "dots";
+      show_workspace_label = false;
+      hide_empty_workspaces = false;
+      show_window_title = false;
+      focused_color = "primary";
+    };
+    mic = {
+      type = "volume";
+      device = "input";
+      show_label = true;
+    };
+    volume = {
+      device = "output";
+      show_label = true;
+    };
+    cpu = sysmon "cpu_usage" colored;
+    cpu_temp = sysmon "cpu_temp" colored;
+    ram = sysmon "ram_pct" colored;
+    net_rx = sysmon "net_rx" colored;
+    net_tx = sysmon "net_tx" colored;
+    disk = sysmon "disk_used_pct" { path = "/"; }; # usage, not available
+    battery = {
+      display_mode = "graphic";
+      scale = 0.8;
+      show_label = false;
+      hide_when_full = false;
+    };
+    clock = {
+      format = "{:%H:%M}";
+      vertical_format = "{:%H\n%M}";
+    };
+    notifications = {
+      hide_when_no_unread = false;
+    };
+    tray = {
+      drawer = true;
+      pinned = [ "Slack" "Vesktop" "Steam" ];
+    };
   };
 }
