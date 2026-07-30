@@ -33,7 +33,7 @@ in
   };
 
   widget = {
-    control_center = {
+    "control-center" = {
       custom_image = "${pkgs.nixos-icons}/share/icons/hicolor/256x256/apps/nix-snowflake.png";
     };
     network = {
