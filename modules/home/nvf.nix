@@ -32,7 +32,7 @@ in {
         foldlevelstart = 99;
         foldcolumn = "1";
         foldtext = "";
-        fillchars = "foldopen:v,foldclose:>,foldsep: ,foldinner: ";
+        fillchars = "foldclose:›,foldopen:⌄,foldsep: ,foldinner: ,fold: ";
 
       };
 
@@ -458,6 +458,19 @@ in {
       comments = {
         comment-nvim.enable = true;
       };
+      luaConfigRC.foldtext = ''
+        function _G.custom_foldtext()
+          local ok, chunks = pcall(vim.treesitter.foldtext)
+          if not ok or type(chunks) ~= "table" then
+            -- no treesitter parser: fall back to the raw first line
+            chunks = { { vim.fn.getline(vim.v.foldstart), "Folded" } }
+          end
+          local count = vim.v.foldend - vim.v.foldstart + 1
+          chunks[#chunks + 1] = { ("  ↙ %d"):format(count), "Comment" }
+          return chunks
+        end
+        vim.o.foldtext = "v:lua.custom_foldtext()"
+      '';
     };
   };
 
