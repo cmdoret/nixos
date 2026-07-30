@@ -1,16 +1,19 @@
-{host, ...}: let
+{host, lib, ...}: let
   inherit
     (import ../../../hosts/${host}/variables.nix)
     browser
     terminal
     ;
+    terminalCmd = {
+        ghostty = "${terminal} +new-window";
+    }.${terminal} or terminal;
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$modifier,Return,exec,${terminal}"
+      "$modifier,Return,exec,${terminalCmd}"
       "$modifier SHIFT,B,exec,web-search"
       "$modifier,B,exec,${browser}"
-      "$modifier,Y,exec,${terminal} -e yazi"
+      "$modifier,Y,exec,${terminalCmd} -e yazi"
       "$modifier,S,exec,screenshootin"
       "$modifier,C,exec,hyprpicker -a"
       "$modifier,T,exec,pypr toggle term"
