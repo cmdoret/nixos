@@ -1,19 +1,24 @@
 { }:
+let
+  sysmon = stat: extra: { type = "sysmon"; show_label = false; inherit stat; } // extra;
+  colored = { color = "primary"; icon_color = "on_surface"; };
+in
 {
   bar.default = {
     position = "top";
     capsule = false;
+    margin_ends = 0;
     start = [
       "control-center"
       "bluetooth"
       "network"
+      "mic"
+      "volume"
       "media"
       "audio_visualizer"
     ];
     center = [ "taskbar" ];
     end = [
-      "mic"
-      "volume"
       "cpu"
       "cpu_temp"
       "ram"
@@ -21,7 +26,6 @@
       "net_tx"
       "disk"
       "battery"
-      "power_profile"
       "clock"
       "notifications"
       "tray"
@@ -32,17 +36,18 @@
     network = {
       vpn_status = "both";
       show_vpn_label = true;
-      show_label = true;
+      show_label = false;
     };
     media = {
       hide_when_no_media = true;
     };
     audio_visualizer = {
+      enabled = false;
       show_when_idle = false;
     };
     taskbar = {
       group_by_workspace = true;
-      workspace_group_content = "icons";
+      workspace_group_content = "dots";
       show_workspace_label = false;
       hide_empty_workspaces = false;
       show_window_title = false;
@@ -57,34 +62,17 @@
       device = "output";
       show_label = true;
     };
-    cpu = {
-      type = "sysmon";
-      stat = "cpu_usage";
-    };
-    cpu_temp = {
-      type = "sysmon";
-      stat = "cpu_temp";
-    };
-    ram = {
-      type = "sysmon";
-      stat = "ram_pct";
-    };
-    net_rx = {
-      type = "sysmon";
-      stat = "net_rx";
-    };
-    net_tx = {
-      type = "sysmon";
-      stat = "net_tx";
-    };
-    disk = {
-      type = "sysmon";
-      stat = "disk_used_pct";
-      path = "/";
-    };
+    cpu = sysmon "cpu_usage" colored;
+    cpu_temp = sysmon "cpu_temp" colored;
+    ram = sysmon "ram_pct" colored;
+    net_rx = sysmon "net_rx" colored;
+    net_tx = sysmon "net_tx" colored;
+    disk = sysmon "disk_used_pct" { path = "/"; }; # usage, not available
     battery = {
+      display_mode = "graphic";
+      scale = 0.8;
       show_label = false;
-      hide_when_full = true;
+      hide_when_full = false;
     };
     clock = {
       format = "{:%H:%M}";
@@ -94,6 +82,7 @@
       hide_when_no_unread = false;
     };
     tray = {
+      drawer = true;
       pinned = [ "Slack" "Vesktop" "Steam" ];
     };
   };

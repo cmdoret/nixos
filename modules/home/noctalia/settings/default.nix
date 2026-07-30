@@ -12,6 +12,8 @@ in
     app_icon_colorize = true;
     date_format = "%A, %d %B";
     launcher.compact = true;
+    panel.open_near_click_control_center = true;
+    screen_corners.enabled = true;
     session = import ./session-menu.nix { };
   };
 
@@ -21,8 +23,17 @@ in
     enabled = true;
     margin_edge = 0;
     launcher_position = "start";
+    layer = "overlay";
+    reserve_space = false;
+    smart_auto_hide = true;
     show_dots = true;
     show_instance_count = true;
+  };
+
+  location.auto_locate = true;
+
+  calendar = {
+    enabled = true;
   };
 
   lockscreen = {
