@@ -1,6 +1,6 @@
 { pkgs }:
 let
-  sysmon = stat: extra: { type = "sysmon"; show_label = false; inherit stat; } // extra;
+  sysmon = stat: extra: { type = "sysmon"; visualization = "gauge"; show_value = false; inherit stat; } // extra;
   colored = { color = "primary"; icon_color = "on_surface"; };
 in
 {
