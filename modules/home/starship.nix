@@ -106,7 +106,7 @@
         bash_indicator = "";
         fish_indicator = "";
         zsh_indicator = "zsh";
-        nu_indicator = "nu";
+        nu_indicator = "󰟆";
       };
 
       c = {
