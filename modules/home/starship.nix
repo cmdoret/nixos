@@ -105,7 +105,7 @@
         format = "[$indicator ]($style)";
         bash_indicator = "";
         fish_indicator = "";
-        zsh_indicator = "zsh";
+        zsh_indicator = "";
         nu_indicator = "󰟆";
       };
 
