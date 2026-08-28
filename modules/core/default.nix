@@ -20,6 +20,7 @@
     ./syncthing.nix
     ./system.nix
     ./thunar.nix
+    ./unstable.nix
     ./user.nix
     ./virtualisation.nix
     ./xserver.nix
