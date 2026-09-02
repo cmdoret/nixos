@@ -78,5 +78,5 @@ in
 
   # NOTE: v4's tailscale/usb-drive-manager have no v5 port
   # TODO: v5 seeds the official + community git -> enable later with
-  # `plugins.enabled = [ "author/plugin" ]`
+  plugins.enabled = [ "rylos/tailnet" ];
 }

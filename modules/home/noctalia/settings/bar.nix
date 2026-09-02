@@ -12,6 +12,7 @@ in
       "control-center"
       "bluetooth"
       "network"
+      "tailscale"
       "mic"
       "volume"
       "media"
@@ -40,6 +41,10 @@ in
       vpn_status = "both";
       show_vpn_label = true;
       show_label = false;
+    };
+    tailscale = {
+      type = "rylos/tailnet:bar";
+      show_count = false;
     };
     media = {
       hide_when_no_media = true;
