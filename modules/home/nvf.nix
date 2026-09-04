@@ -309,7 +309,13 @@ in {
           key = "<leader>bd";
           mode = ["v"];
           action = "c<c-r>=system('base64 --wrap=0 -d', @\")<cr><esc>";
-          desc = "Base64 Decode";
+          desc = "Base64 decode (text)";
+        }
+        {
+          key = "<leader>bx";
+          mode = ["v"];
+          action = "c<c-r>=system('base64 --wrap=0 -d | xxd', @\")<cr><esc>";
+          desc = "Base64 decode → hex (binary-safe)";
         }
       ];
 
