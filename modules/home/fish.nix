@@ -21,7 +21,7 @@
         ka = "kubectl apply";
         la = "eza --icons -lah --group-directories-first -1";
         ll = "eza --icons -lh --group-directories-first -1 --no-user --long";
-        ls = "ls | xargs -i+ nix run nixpkgs#cowsay + | nix run nixpkgs#lolcat";
+        ls = "ls | xargs -i+ nix run nixpkgs#cowsay -- -f stegosaurus + | nix run nixpkgs#lolcat";
         man = "batman";
         ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
         sv = "sudo nvim";
