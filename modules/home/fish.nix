@@ -21,12 +21,12 @@
         ka = "kubectl apply";
         la = "eza --icons -lah --group-directories-first -1";
         ll = "eza --icons -lh --group-directories-first -1 --no-user --long";
-        ls = "eza --icons --group-directories-first -1";
+        ls = "ls | xargs -i+ nix run nixpkgs#cowsay + | nix run nixpkgs#lolcat";
         man = "batman";
         ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
         sv = "sudo nvim";
         tree = "eza --icons --tree --group-directories-first";
-        v = "nvim";
+        v = "code";
     };
 
     functions = {
@@ -37,7 +37,7 @@
         '';
       };
       mp4-shrink = {
-        description = "Shrink mp4 using h265";
+        description = "Shrek mp4 using h265";
         body = ''
           ffmpeg -i $argv[1] -vcodec libx265 -crf 28 $argv[2]
         '';
