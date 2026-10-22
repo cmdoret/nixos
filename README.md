@@ -49,7 +49,7 @@ How it works:
 
 ```mermaid
 flowchart TD
-    B[flake.nix] -->|$HOSTNAME| C["hosts/${host}/flake-vars.nix"]
+    B[flake.nix] -->|hostname| C["hosts/${host}/flake-vars.nix"]
     C -->|"${profile}"| E["profiles/${profile}/default.nix"]
     E --> F["profiles/base.nix"]
     E --> drivers(("load drivers"))
@@ -63,12 +63,12 @@ flowchart TD
     I --> L["./hosts/${host}/host-packages.nix"]
 ```
 
-* Build with `nh os switch` or `nixos-rebuild switch --flake ".#${HOSTNAME}"`
-  + `nh` automatically picks the profile named like `$HOSTNAME` by default
+* Build with `nh os switch` or `nixos-rebuild switch --flake ".#$(hostname)"`
+  + `nh` automatically picks the profile named like `$(hostname)` by default
 * `flake.nix` reads host configurations from `./hosts/*/flake-vars.nix`
 * The host configuration field `profile` is used to load a specific hardware profile.
 * The hardware profile enables specific drivers and imports `./profiles/base.nix` which imports the rest of the system (drivers, modules, roles, host).
-* The host `./hosts/$HOSTNAME/default.nix` defines hardware configuration and toggle roles.
+* The host `./hosts/$(hostname)/default.nix` defines hardware configuration and toggle roles.
 
 
 
