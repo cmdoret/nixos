@@ -29,8 +29,6 @@ git config --global user.email "$installusername@gmail.com"
 git add .
 git config --global --unset-all user.name
 git config --global --unset-all user.email
-sed -i "/^\s*host[[:space:]]*=[[:space:]]*\"/s/\"\(.*\)\"/\"$hostName\"/" ./flake.nix
-sed -i "/^\s*profile[[:space:]]*=[[:space:]]*\"/s/\"\(.*\)\"/\"$profile\"/" ./flake.nix
 
 
 read -rp "Enter your keyboard layout: [ us ] " keyboardLayout
@@ -60,9 +58,20 @@ sudo nixos-generate-config --show-hardware-config > ./hosts/$hostName/hardware.n
 
 echo "-----"
 
+echo "Setting flake-vars"
+cat << EOF > ./hosts/$hostName/flake-vars.nix
+{
+  system = "x86_64-linux";
+  profile = "$profile";
+  username = "$installusername";
+}
+EOF
+
+echo "-----"
+
 echo "Setting Required Nix Settings Then Going To Install"
 NIX_CONFIG="experimental-features = nix-command flakes"
 
 echo "-----"
 
-sudo nixos-rebuild switch --flake ${PWD}#${profile}
+sudo nixos-rebuild switch --flake ${PWD}#${hostName}
