@@ -14,6 +14,7 @@
     ./nix.nix
     ./packages.nix
     ./restic.nix
+    ./rido.nix
     ./security.nix
     ./services.nix
     ./stylix.nix
