@@ -25,6 +25,7 @@ in {
     ./obsidian.nix
     ./python.nix
     ./qt.nix
+    ./rido.nix
     ./scripts
     ./starship.nix
     ./stylix
