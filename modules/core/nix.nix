@@ -32,6 +32,8 @@
         "nix-command"
         "flakes"
       ];
+      max-jobs = 6;
+      cores = 6;
 
       # Add your own username to the trusted list
       trusted-users = [ "@wheel" ];
