@@ -4,6 +4,7 @@
     libvirtd.enable = false;
     docker = {
       enable = true;
+      daemon.settings.features.containerd-snapshotter = true;
       daemon.settings.live-restore = false;
     };
     podman.enable = false;
