@@ -9,6 +9,8 @@ in {
   # Styling Options
   stylix = {
     enable = true;
+    # Overlays patch gtksourceview* and nixos-icons -> cache miss -> long source builds
+    overlays.enable = false;
     image = stylixImage;
 
     base16Scheme = lib.mkIf (theme != null) "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
