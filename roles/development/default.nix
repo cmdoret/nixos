@@ -10,6 +10,7 @@
       nodejs
       uv
       zed-editor
+      (pkgs.callPackage ../../packages/kubectl-encrypted-kubeconfig { })
     ];
   };
 }
