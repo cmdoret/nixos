@@ -1,5 +1,6 @@
 {
   host,
+  lib,
   pkgs,
   config,
   username,
@@ -19,10 +20,7 @@
       inhibitsSleep = true;
       initialize = true;
       package = pkgs.restic;
-      paths = [
-        "/home"
-        "/data"
-      ];
+      paths = ["/home"] ++ lib.optional (config.fileSystems ? "/data") "/data";
       pruneOpts = ["--keep-daily=7" "--keep-weekly=4" "--keep-monthly=6"];
       repository = "/mnt/backup/${host}_restic";
       passwordFile = "/etc/nixos/restic-password";
