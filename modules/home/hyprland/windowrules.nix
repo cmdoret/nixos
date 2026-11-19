@@ -1,9 +1,4 @@
-{host, ...}: let
-  inherit
-    (import ../../../hosts/${host}/variables.nix)
-    extraMonitorSettings
-    ;
-in {
+_: {
   wayland.windowManager.hyprland = {
     settings = {
       windowrule = [
@@ -26,7 +21,6 @@ in {
         "tag +gamestore, match:title ^([Ll]utris)$"
         "tag +gamestore, match:class ^(com.heroicgameslauncher.hgl)$"
         "tag +settings, match:class ^(gnome-disks|wihotspot(-gui)?)$"
-        "tag +settings, match:class ^([Rr]ofi)$"
         "tag +settings, match:class ^(file-roller|org.gnome.FileRoller)$"
         "tag +settings, match:class ^(nm-applet|nm-connection-editor|blueman-manager)$"
         "tag +settings, match:class ^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$"

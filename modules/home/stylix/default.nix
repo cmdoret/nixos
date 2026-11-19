@@ -1,4 +1,4 @@
-{config, pkgs, lib, host, ...}:
+{config, ...}:
 {
   stylix.targets = {
     anki.enable = true;
@@ -6,15 +6,12 @@
     firefox.enable = true;
     ghostty.enable = true;
     hyprland.enable = false;
-    hyprlock.enable = false;
     k9s.enable = true;
     nvf.enable = true;
     obsidian.enable = true;
     qt.enable = true;
-    rofi.enable = false;
     starship.enable = true;
     vesktop.enable = true;
-    waybar.enable = false;
     zathura.enable = true;
     zed.enable = true;
   };

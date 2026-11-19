@@ -2,8 +2,6 @@
   config, 
   inputs,
   lib,
-  options,
-  pkgs,
   ...
 }: {
   ### Nix Specific Settings ===================================================
@@ -16,10 +14,7 @@
     # Making legacy nix commands consistent as well, awesome!
     nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
 
-    # Deduplicate and optimize nix store
-    # Don't do it on every build (slow)
-    settings.auto-optimise-store = false;
-    # Optimize once a day
+    # Deduplicate the store once a day rather than on every build (slow)
     optimise = {
       automatic = true;
       dates = [ "daily" ];
@@ -37,16 +32,6 @@
 
       # Add your own username to the trusted list
       trusted-users = [ "@wheel" ];
-      substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-    };
-
-    # Garbage collector
-    # note: already handled by nh.clean
-    gc = {
-      automatic = false;
-      dates = "daily";
-      options = "--delete-older-than 60d";
     };
   };
 

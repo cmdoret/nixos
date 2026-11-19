@@ -1,4 +1,4 @@
-{host, lib, ...}: let
+{host, ...}: let
   inherit
     (import ../../../hosts/${host}/variables.nix)
     browser
@@ -95,10 +95,6 @@ in {
       "$modifier,D,exec,noctalia msg panel-toggle launcher"
       "$modifier SHIFT,S,exec,noctalia msg panel-toggle session"
       "$modifier,E,exec,noctalia msg panel-toggle launcher /emo"
-      # replaced by noctalia
-      #"$modifier,E,exec,emopicker9000"
-      #"$modifier SHIFT,S,exec,wlogout"
-      #"$modifier,escape,exec,hyprlock --immediate"
     ];
     bindl = [
       ",switch:on:Lid Switch, exec, hypr-lid-close"

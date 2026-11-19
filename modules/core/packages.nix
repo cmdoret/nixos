@@ -1,9 +1,7 @@
 {pkgs, ...}: {
   programs = {
-    dconf.enable = true;
     seahorse.enable = true;
     hyprland.enable = true; #create desktop file and depedencies if you switch to GUI login MGR
-    hyprlock.enable = false; #resolve pam issue https://gitlab.com/Zaney/zaneyos/-/issues/164
     fuse.userAllowOther = true;
     mtr.enable = true;
     gnupg.agent = {
@@ -13,7 +11,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    #amfora # Fancy Terminal Browser For Gemini Protocol
     anki # flashcard and SRS program
     appimage-run # Needed For AppImage Support
     bitwarden-desktop # password manager
@@ -40,7 +37,6 @@
     gimp # Great Photo Editor
     git-lfs # large file support for git
     gping #graphical ping
-    tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
     htop # Simple Terminal Based System Monitor
     hyprpicker # Color Picker
     eog # For Image Viewing
@@ -55,13 +51,11 @@
     libnotify # For Notifications
     libreoffice # office suite
     lm_sensors # Used For Getting Hardware Temps
-    #logseq # personal knowledge management
     lolcat # Add Colors To Your Terminal Command Output
     loupe # gtk based image viewer
     lshw # Detailed Hardware Information
     mesa-demos # Needed for inxi -G GPU info
     mpv # Incredible Video Player
-    mullvad-vpn # VPN client
     mullvad-browser # privacy-hardened browser
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nextcloud-client # Personal cloud-storage

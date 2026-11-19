@@ -73,7 +73,6 @@
         specialArgs = {
           inherit inputs;
           host = cfg.hostName;
-          profile = cfg.profile;
           username = cfg.username;
         };
         modules = [./profiles/${cfg.profile}];

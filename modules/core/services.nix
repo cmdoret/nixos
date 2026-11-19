@@ -1,29 +1,20 @@
-{profile, ...}: {
+_: {
   # Services to start
   services = {
     libinput.enable = true; # Input Handling
     fstrim.enable = true; # SSD Optimizer
     gvfs.enable = true; # For Mounting USB & More
-    openssh.enable = false; # Enable SSH
     tailscale = {
       # tailscale vpn
       enable = true;
       useRoutingFeatures = "client";
     };
     blueman.enable = true; # Bluetooth Support
-    keybase.enable = false;
-    kbfs.enable = false;
     tumbler.enable = true; # Image/video preview
     gnome.gnome-keyring.enable = true;
     gnome.gcr-ssh-agent.enable = false; # gpg-agent already starts an SSH agent
-    kmscon.extraConfig = ''
-      font-size=12
-    '';
     smartd = {
-      enable =
-        if profile == "vm"
-        then false
-        else true;
+      enable = true;
       autodetect = true;
     };
     pipewire = {

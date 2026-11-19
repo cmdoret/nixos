@@ -9,7 +9,6 @@
     avatarImage
     extraMonitorSettings
     keyboardLayout
-    stylixImage
     ;
 in {
   home.packages = with pkgs; [
@@ -32,7 +31,6 @@ in {
       recursive = true;
     };
     ".face.icon".source = ./avatar/${avatarImage};
-    ".config/face.jpg".source = ./avatar/${avatarImage};
   };
   wayland.windowManager.hyprland = {
     enable = true;
@@ -53,10 +51,6 @@ in {
         "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user start hyprpolkitagent"
-        #"killall -q awww;sleep .5 && awww-daemon"
-        #"killall -q waybar;sleep .5 && waybar"
-        #"killall -q swaync;sleep .5 && swaync"
-        #"sleep 1.0 && swww img ${stylixImage}"
         "pypr &"
         "fcitx5 -d"
         "noctalia"
@@ -81,8 +75,6 @@ in {
       };
 
       gestures = {
-        #workspace_swipe = 1;
-        #workspace_swipe_fingers = 3;
         workspace_swipe_distance = 500;
         workspace_swipe_invert = 1;
         workspace_swipe_min_speed_to_force = 30;
@@ -157,8 +149,6 @@ in {
       };
 
       render = {
-        #explicit_sync = 1; # Change to 1 to disable
-        #explicit_sync_kms = 1;
         direct_scanout = 0;
       };
 
@@ -172,9 +162,6 @@ in {
     extraConfig = "
       monitor=,preferred,auto,auto
       ${extraMonitorSettings}
-      # To enable blur on waybar uncomment the line below
-      # Thanks to SchotjeChrisman
-      # layerrule = blur,waybar
     ";
   };
 }

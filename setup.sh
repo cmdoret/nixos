@@ -13,7 +13,6 @@ Options:
 nvidia
 nvidia-laptop
 intel
-vm
 Please type out your choice: " profile
 if [ -z "$profile" ]; then
   profile="amd"
@@ -46,10 +45,6 @@ if [ -z "$consoleKeyMap" ]; then
 fi
 
 sed -i "/^\s*consoleKeyMap[[:space:]]*=[[:space:]]*\"/s/\"\(.*\)\"/\"$consoleKeyMap\"/" ./hosts/$hostName/variables.nix
-
-echo "-----"
-
-sed -i "/^\s*username[[:space:]]*=[[:space:]]*\"/s/\"\(.*\)\"/\"$installusername\"/" ./flake.nix
 
 echo "-----"
 

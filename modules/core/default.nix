@@ -1,4 +1,4 @@
-{pkgs, inputs, ...}: {
+{inputs, ...}: {
   imports = [
     ./boot.nix
     ./evolution.nix
@@ -16,7 +16,6 @@
     ./security.nix
     ./services.nix
     ./stylix.nix
-    ./syncthing.nix
     ./system.nix
     ./thunar.nix
     ./unstable.nix

@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, config, ... }:
+{ pkgs, lib, config, ... }:
 {
   config = lib.mkIf config.music.enable {
     environment.systemPackages = with pkgs; [
