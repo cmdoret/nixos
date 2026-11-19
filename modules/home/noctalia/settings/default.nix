@@ -1,6 +1,6 @@
 { pkgs, wallpaper }:
 let
-  hyprLoad = "hyprctl reload";
+  hyprLoad = "hypr-reload"; # hyprctl reload, but keeps eDP-1 off if it was
 in
 {
   # bar hold widget *names*; their settings live in the [widget.*] tables
