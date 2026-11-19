@@ -25,7 +25,7 @@ in {
       "$modifier SHIFT,F,fullscreen,"
       "$modifier SHIFT,SPACE,togglefloating"
       "$modifier ALT,F,workspaceopt, allfloat"
-      "$modifier SHIFT,R,exec,hyprctl reload"
+      "$modifier SHIFT,R,exec,hypr-reload"
       "$modifier SHIFT,left,movewindow,l"
       "$modifier SHIFT,right,movewindow,r"
       "$modifier SHIFT,up,movewindow,u"
@@ -102,7 +102,8 @@ in {
     ];
     bindl = [
       ",switch:on:Lid Switch, exec, hypr-lid-close"
-      ",switch:off:Lid Switch, exec, hyprctl keyword monitor \"eDP-1, preferred, 0x0, 1\""
+      # reload re-applies the host's eDP-1 rule (resolution, position, scale)
+      ",switch:off:Lid Switch, exec, hyprctl reload"
     ];
 
     bindm = [
