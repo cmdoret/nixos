@@ -8,7 +8,6 @@
     ./hardware.nix
     ./mullvad.nix
     ./network.nix
-    ./nfs.nix
     ./nh.nix
     ./nix-ld.nix
     ./nix.nix
