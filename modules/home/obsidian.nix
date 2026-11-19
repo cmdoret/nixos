@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+_:
 {
   programs.obsidian = {
     enable = true;

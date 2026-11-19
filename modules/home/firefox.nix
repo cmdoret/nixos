@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{config, ...}: {
   stylix.targets.firefox = {
     profileNames = [
       "clean-profile"

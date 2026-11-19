@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, config, ... }:
+{ pkgs, lib, config, ... }:
 {
   imports = [
     ./steam.nix

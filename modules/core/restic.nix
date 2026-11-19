@@ -6,9 +6,6 @@
   username,
   ...
 }: {
-  environment.systemPackages = [
-    pkgs.libnotify
-  ];
   services.restic.backups = {
     daily = {
       exclude = [

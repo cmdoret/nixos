@@ -8,9 +8,6 @@
   # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
   extraMonitorSettings = "monitor = eDP-1,2560x1440@60,auto,1.333";
 
-  # Waybar Settings
-  clock24h = true;
-
   # Program Options
   browser = "firefox"; # Set Default Browser (google-chrome-stable for google-chrome)
   terminal = "ghostty"; # Set Default System Terminal
@@ -29,7 +26,6 @@
   avatarImage = "bombyx.jpg";
   # among files in ./wallpapers, filename only
   lockScreenImage = "beautifulmountainscape.jpg";
-  rofiImage = "voxels3d.png";
   # See: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
   theme = "onedark";
   # Autogenerate theme based on this image if theme is null.

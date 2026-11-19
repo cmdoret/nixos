@@ -1,14 +1,8 @@
-{ pkgs, inputs, lib, config, ... }:
+_:
 {
   imports = [
     ./fprintd.nix
     ./pam.nix
     ./power.nix
   ];
-
-  config = lib.mkIf config.laptop.enable {
-    environment.systemPackages = with pkgs; [
-      upower
-    ];
-  };
 }

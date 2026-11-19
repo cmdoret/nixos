@@ -1,8 +1,5 @@
-{host, ...}: let
-  inherit (import ../../hosts/${host}/variables.nix) waybarChoice;
-in {
+_: {
   imports = [
-    #./amfora.nix
     ./bash
     ./bat.nix
     ./btop.nix
@@ -30,17 +27,11 @@ in {
     ./starship.nix
     ./stylix
     ./swappy.nix
-    ./virtmanager.nix
     ./wezterm.nix
     ./xdg.nix
     ./yazi
     ./zathura.nix
     ./zoxide.nix
     ./zsh
-    # replaced by noctalia
-    #./rofi
-    #./swaync.nix
-    #waybarChoice
-    #./wlogout
   ];
 }

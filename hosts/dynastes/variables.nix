@@ -8,9 +8,6 @@
   # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
   extraMonitorSettings = "monitor = HDMI-A-1,2560x1440@120,auto,1";
   
-  # Waybar Settings
-  clock24h = true;
-
   # Program Options
   browser = "firefox"; # Set Default Browser (google-chrome-stable for google-chrome)
   terminal = "ghostty"; # Set Default System Terminal
@@ -29,7 +26,6 @@
   avatarImage = "dynastes-neon.jpg";
   # among files in ./wallpapers, filename only
   lockScreenImage = "neon-buildings-down.jpg";
-  rofiImage = "china-skyscrapers-night.jpg";
   # See:
   # * supported: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
   # * gallery: https://tinted-theming.github.io/tinted-gallery/

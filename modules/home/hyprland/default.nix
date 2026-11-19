@@ -8,8 +8,5 @@ in {
     ./hyprland.nix
     ./pyprland.nix
     ./windowrules.nix
-    # replaced by noctalia (idle + lockscreen)
-    #./hypridle.nix
-    #./hyprlock.nix
   ];
 }

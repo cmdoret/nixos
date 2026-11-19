@@ -34,14 +34,13 @@ The flake outputs are as follows, exposing one configuration per host in `./host
 │   ├───bombyx: NixOS configuration
 │   ├───default: NixOS configuration
 │   ├───dynastes: NixOS configuration
-│   ├───elimus: NixOS configuration
-│   └───zaneyos-23-vm: NixOS configuration
+│   └───elimus: NixOS configuration
 └───packages
     ├───aarch64-darwin
-    │   ├───antigravity-jail: package 'antigravity-jail-1.0.0'
+    │   ├───kubectl-encrypted-kubeconfig: package 'kubectl-encrypted-kubeconfig-1.0.2'
     │   └───stremio-enhanced: package 'stremio-enhanced-1.0.2'
     └───x86_64-linux
-        ├───antigravity-jail: package 'antigravity-jail-1.0.0'
+        ├───kubectl-encrypted-kubeconfig: package 'kubectl-encrypted-kubeconfig-1.0.2'
         └───stremio-enhanced: package 'stremio-enhanced-1.0.2'
 ```
 

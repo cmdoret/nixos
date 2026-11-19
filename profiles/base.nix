@@ -6,5 +6,4 @@
     ../roles
   ];
 
-  vm.guest-services.enable = false;
 }

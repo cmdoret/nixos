@@ -11,9 +11,6 @@
     monitor = DP-5,preferred,3840x2400,1
   '';
 
-  # Waybar Settings
-  clock24h = false;
-
   # Program Options
   browser = "firefox"; # Set Default Browser (google-chrome-stable for google-chrome)
   terminal = "ghostty"; # Set Default System Terminal
@@ -32,7 +29,6 @@
   avatarImage = "sdsc.jpg";
   # among files in ./wallpapers, filename only
   lockScreenImage = "forest-fog.jpg";
-  rofiImage = "pine.jpg";
   # See:
   # * supported: https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
   # * gallery: https://tinted-theming.github.io/tinted-gallery/
