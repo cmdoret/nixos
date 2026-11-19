@@ -1,9 +1,5 @@
 {pkgs, ...}: {
-  xdg.portal = {
-    enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-hyprland];
-    configPackages = [pkgs.hyprland];
-  };
+  # NOTE: xdg.portal is set up by programs.hyprland (system) and home/xdg.nix (user)
   services = {
     flatpak.enable = true; # Enable Flatpak
   };

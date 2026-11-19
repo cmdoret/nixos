@@ -5,10 +5,11 @@ in {
     animChoice
     ./binds.nix
     ./env.nix
-    ./hypridle.nix
     ./hyprland.nix
-    ./hyprlock.nix
     ./pyprland.nix
     ./windowrules.nix
+    # replaced by noctalia (idle + lockscreen)
+    #./hypridle.nix
+    #./hyprlock.nix
   ];
 }
