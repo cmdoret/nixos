@@ -33,9 +33,14 @@
       url = "github:nix-community/stylix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sshwarm = {
+      url = "github:cmdoret/sshwarm";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
+
     lib = nixpkgs.lib;
 
     hosts = lib.filterAttrs (name: type: type == "directory") (builtins.readDir ./hosts);
@@ -75,7 +80,9 @@
           host = cfg.hostName;
           username = cfg.username;
         };
-        modules = [./profiles/${cfg.profile}];
+        modules = [
+          ./profiles/${cfg.profile}
+        ];
       }
     ) hostConfigs;
   };

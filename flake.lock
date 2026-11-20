@@ -347,7 +347,28 @@
         "noctalia": "noctalia",
         "nvf": "nvf",
         "rido": "rido",
+        "sshwarm": "sshwarm",
         "stylix": "stylix"
+      }
+    },
+    "sshwarm": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795137097,
+        "narHash": "sha256-eHRoM+XjZ1Z4uaTXd5ooacel4s4CAggqdwB6S9UJLdg=",
+        "owner": "cmdoret",
+        "repo": "sshwarm",
+        "rev": "4a8b8e3468b8d463cba5fcfe7b1684326a30e996",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cmdoret",
+        "repo": "sshwarm",
+        "type": "github"
       }
     },
     "stylix": {

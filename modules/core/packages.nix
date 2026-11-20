@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, sshwarmPkg, ...}: {
   programs = {
     seahorse.enable = true;
     hyprland.enable = true; #create desktop file and depedencies if you switch to GUI login MGR
@@ -66,6 +66,7 @@
     playerctl # Allows Changing Media Volume Through Scripts
     p7zip # compression utility
     ripgrep # Improved Grep
+    sshwarm # github:cmdoret/sshwarm for monitoring
     signal-desktop # messaging
     socat # Needed For Screenshots
     sox # audio support for FFMPEG
