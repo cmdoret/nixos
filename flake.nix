@@ -80,9 +80,7 @@
           host = cfg.hostName;
           username = cfg.username;
         };
-        modules = [
-          ./profiles/${cfg.profile}
-        ];
+        modules = [ ./profiles/${cfg.profile} ];
       }
     ) hostConfigs;
   };

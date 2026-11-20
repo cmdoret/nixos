@@ -1,4 +1,4 @@
-{pkgs, sshwarmPkg, ...}: {
+{pkgs, ...}: {
   programs = {
     seahorse.enable = true;
     hyprland.enable = true; #create desktop file and depedencies if you switch to GUI login MGR
